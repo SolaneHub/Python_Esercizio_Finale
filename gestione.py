@@ -1,41 +1,36 @@
 import pandas as pd
-import sqlite3
 import streamlit as st
 
-#connessione file csv
 df = pd.read_csv("dati.csv")
-df = df.set_index('ID')
+df = df.set_index("ID")
 
-# Configurazione pagina
-st.set_page_config(
-    page_title="My Application",
-    page_icon="",
-    layout="wide"
-)
+st.set_page_config(page_title="My Application", layout="wide")
 
-# Title
 st.title("Gestore Ticket")
-
-# Subtitle
 st.header("Lista")
-
-# Text
 st.write("Ticket in attesa.")
 
-#df
-#edit_df = st.data_editor(df)
+# Tabella intera con selezione riga attiva
 
-#iterrows stampa una riga alla volta
-for index, row in df.iterrows():
+#"evento" è l'oggetto che contiene le informazioni di interazione con la tabella
+evento = st.dataframe(
+    df,
+    use_container_width=True, #utilizza tutta la larghezza disponibile
+    selection_mode="single-row", #seleziona una sola riga alla volta
+    on_select="rerun", #"rerun": quando selezioni una riga riesegue lo script e aggiorna l'evento
+)
 
-    #colonna 1 contiene il nostro dataframe
-    #colonna 2 contiene pulsanti per la modifica
-    col1, col2 = st.columns([3, 1])
+# Controlla se righe sono selezionate
+righe_selezionate = evento.selection.rows
 
-    with col1:
-        st.dataframe(pd.DataFrame([row]), width="stretch")
+# Se righe sono selezionate, compare pulsante modifica
+if righe_selezionate:
+  #stampa ID selezionato
+  id_selezionato = df.index[righe_selezionate[0]]
+  st.success(f"Ticket selezionato: ID {id_selezionato}")
 
-    with col2:
-        #key = identificatore del pulsante
-        if st.button("Modifica", key=f"modifica_{index}"):
-            print("Pagina 2")
+  #pulsante
+  if st.button("Modifica ticket selezionato"):
+    st.session_state["ticket_id"] = id_selezionato
+    st.switch_page("modifica_ticket.py")
+    st.rerun()
