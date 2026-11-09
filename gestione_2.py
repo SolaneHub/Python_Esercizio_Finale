@@ -11,19 +11,25 @@ st.header("Lista")
 st.write("Ticket in attesa.")
 
 # Tabella intera con selezione riga attiva
+
+#"evento" è la variabile che contiene le informazioni di interazione con la tabella
 evento = st.dataframe(
     df,
-    use_container_width=True,
-    selection_mode="single-row",
-    on_select="rerun",
+    use_container_width=True, #utilizza tutta la larghezza disponibile
+    selection_mode="single-row", #seleziona una sola riga alla volta
+    on_select="rerun", #"rerun": quando selezioni una riga riesegue lo script e aggiorna l'evento
 )
 
-# Controllo della riga selezionata
+# Controlla se righe sono selezionate
 righe_selezionate = evento.selection.rows
+
+# Se righe sono selezionate, compare pulsante modifica
 if righe_selezionate:
+  #stampa ID selezionato
   id_selezionato = df.index[righe_selezionate[0]]
   st.success(f"Ticket selezionato: ID {id_selezionato}")
 
+  #pulsante
   if st.button("Modifica ticket selezionato"):
     st.session_state["ticket_id"] = id_selezionato
     st.rerun()
