@@ -12,7 +12,7 @@ st.write("Ticket in attesa.")
 
 # Tabella intera con selezione riga attiva
 
-#"evento" è la variabile che contiene le informazioni di interazione con la tabella
+#"evento" è l'oggetto che contiene le informazioni di interazione con la tabella
 evento = st.dataframe(
     df,
     use_container_width=True, #utilizza tutta la larghezza disponibile
@@ -32,4 +32,5 @@ if righe_selezionate:
   #pulsante
   if st.button("Modifica ticket selezionato"):
     st.session_state["ticket_id"] = id_selezionato
+    st.switch_page("modifica_ticket.py")
     st.rerun()
