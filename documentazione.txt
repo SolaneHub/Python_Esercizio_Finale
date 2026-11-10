@@ -13,5 +13,16 @@ Abbiamo aggiunto la reindirizzazione alla pagina della modifica del ticket trami
  Abbiamo creato la form della modifica con i dati precompilati in base ai valori precedenti, con
  un tasto Salva Modifiche per applicare le modifiche al file csv.
 Pomeriggio
-Risolti i problemi di incompatiobilità dtype per la colonna Cellulare.
- 
+Risolti i problemi di incompatibilità dtype per la colonna Cellulare.
+ Nuova layout per la pagina di modifica.
+ Aggiunto inoltre Prefisso per Cellulare,
+ con pulsante animato per scegliere Prefisso con bandiere,
+ limite caratteri per Descrizione.
+ Aggiunte notifica riguardante l'ID del ticket in modifica.
+
+ Aggiunta pagina di creazione ticket, derivata dalla pagina di modifica.
+ Aggiunta selezione multipla per i ticket.
+ Aggiunta funzionalità per rimozione ticket, con popup di conferma.
+ Layout per la home aggiornata e ripulita del codice.
+
+to-do: grafico che mostra quantità ticket per ogni utente.

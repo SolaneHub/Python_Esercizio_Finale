@@ -15,7 +15,7 @@ from prefissi import get_prefissi_internazionali, separa_prefisso_e_numero
 # =====================================================================
 # Impostiamo il titolo della scheda nel browser e il layout "wide" (largo)
 # per sfruttare l'intera larghezza dello schermo a disposizione.
-st.set_page_config(page_title="Modifica Ticket", layout="wide")
+st.set_page_config(page_title="Crea Ticket", layout="wide")
 
 # Polyfill per consentire a Windows (Chrome ed Edge) di visualizzare correttamente
 # le emoji delle bandiere nazionali, che altrimenti non sono supportate dal font di sistema Segoe UI Emoji.
@@ -174,7 +174,7 @@ components.html(
     width=0,
 )
 
-st.title("Modifica Ticket")
+st.title("Crea Ticket")
 
 # =====================================================================
 # 4. CREAZIONE DEL FORM UNIVOCO (ST.FORM)
@@ -183,7 +183,7 @@ st.title("Modifica Ticket")
 # Logica dietro le quinte: Streamlit, per natura, riesegue l'intero script a ogni interazione.
 # L'uso di st.form blocca questo comportamento continuo, permettendo all'utente
 # di digitare in tutti i campi senza ricaricamenti di pagina indesiderati fino al click sul pulsante finale.
-with st.form("form_modifica_ticket"):
+with st.form("form_crea_ticket"):
   st.subheader("Dati del Ticket")
 
   # Dividiamo l'interfaccia in due colonne parallele per un layout ordinato ed ergonomico

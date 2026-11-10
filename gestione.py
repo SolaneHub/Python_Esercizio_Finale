@@ -24,7 +24,7 @@ df = pd.read_csv("dati.csv", dtype={'Cellulare': 'str'})
 df = df.set_index("ID")
 
 #configurazione pagina
-st.set_page_config(page_title="My Application", layout="wide", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Home", layout="wide", initial_sidebar_state="collapsed")
 
 st.title("Gestore Ticket")
 st.header("Lista ticket in attesa")
