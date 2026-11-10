@@ -1,5 +1,13 @@
-9Nov2026
+Lun9Nov2026
 Abbiamo creato una pagina con streamlit, che stampa il dataframe,
  dandoci la possibilità di selezionare ogni riga.
 Dopo aver selezionato, compare un testo con l'ID selezionato e 
  un pulsante che dà l'opzione di modificare il ticket, il che porterà alla pagina di modifica, da creare.
+
+Mar10Nov2026
+Abbiamo aggiunto la reindirizzazione alla pagina della modifica del ticket tramite
+ un pulsante. Abbiamo anche fatto sì che i dati della richiesta possano essere passati
+ dalla pagina home/gestione a quella della modifica salvando la righa selezionata nel
+ session_state di streamlit.
+ Abbiamo creato la form della modifica con i dati precompilati in base ai valori precedenti, con
+ un tasto Salva Modifiche per applicare le modifiche al file csv.
