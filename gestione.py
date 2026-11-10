@@ -17,27 +17,32 @@ st.write("Ticket in attesa.")
 evento = st.dataframe(
     df,
     width="stretch", #utilizza tutta la larghezza disponibile
-    selection_mode="single-row", #seleziona una sola riga alla volta
+    selection_mode="multi-row", #seleziona più righe
     on_select="rerun", #"rerun": quando selezioni una riga riesegue lo script e aggiorna l'evento
 )
 
 # Controlla se righe sono selezionate
-righe_selezionate = evento.selection.rows
+selezioni = evento.selection.rows
 
 # Se righe sono selezionate, compare pulsante modifica
-if righe_selezionate:
+if selezioni:
   #stampa ID selezionato
-  id_selezionato = df.index[righe_selezionate[0]]
-  st.success(f"Ticket selezionato: ID {id_selezionato}")
+  id_selezionati = df.index[selezioni]
+  st.success(f"Ticket selezionati: ID {id_selezionati}")
 
   #passaggio variabili per la form tramite riga
-  riga_selezionata = df.loc[id_selezionato]
+  
+  riga_selezionata = df.loc[id_selezionati[0]]
   st.session_state["riga_selezionata"] = riga_selezionata
 
-  #st.link_button("Modifica Ticket", "/modifica_ticket")
-  if st.button("Modifica Ticket"):
-    st.switch_page("pages/modifica_ticket.py")
+  if st.button("🗑"):
+    pass
 
-  #test accesso a elemento della riga
-  st.write(st.session_state["riga_selezionata"]['Nome'])
+  #st.link_button("Modifica Ticket", "/modifica_ticket")
+  if len(selezioni) == 1:
+    if st.button("Modifica Ticket"):
+      st.switch_page("pages/modifica_ticket.py")
+
+#test righe selezionate
+st.write("ID selezionate: ", evento.selection.rows)
   
