@@ -4,25 +4,14 @@ import streamlit as st
 df = pd.read_csv("dati.csv")
 df = df.set_index("ID")
 
-st.set_page_config(page_title="My Application", layout="wide")
-
-#dichiariamo altre pagine
-pagina_modifica = st.Page("pages/modifica_ticket.py", title="Modifica ticket")
-
-#nav è l'oggetto di navigazione
-nav = st.navigation(
-    [pagina_modifica],
-    position="hidden"
-)
-nav.run()
-
+#configurazione pagina
+st.set_page_config(page_title="My Application", layout="wide", initial_sidebar_state="collapsed")
 
 st.title("Gestore Ticket")
 st.header("Lista")
 st.write("Ticket in attesa.")
 
 # Tabella intera con selezione riga attiva
-
 #"evento" è l'oggetto che contiene le informazioni di interazione con la tabella
 evento = st.dataframe(
     df,
@@ -39,11 +28,10 @@ if righe_selezionate:
   #stampa ID selezionato
   id_selezionato = df.index[righe_selezionate[0]]
   st.success(f"Ticket selezionato: ID {id_selezionato}")
+  st.session_state["ID"] = id_selezionato
+  #st.link_button("Modifica Ticket", "/modifica_ticket")
+  if st.button("Modifica Ticket"):
+    st.switch_page("pages/modifica_ticket.py")
+  st.write(st.session_state["ID"])
 
-  #pulsante
-  if st.button("Modifica ticket selezionato"):
-    st.session_state["ticket_id"] = id_selezionato
 
-    #Quando usi st.switch_page(), 
-    # Streamlit interrompe l'esecuzione corrente e passa direttamente alla nuova pagina
-    st.switch_page(pagina_modifica)
