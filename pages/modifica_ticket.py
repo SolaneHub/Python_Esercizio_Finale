@@ -5,9 +5,13 @@ st.set_page_config(page_title="app", layout="wide", initial_sidebar_state="colla
 
 st.title("Modifica Ticket")
 
+#
 #accesso a variabile sessione con st.session_state[]
-st.write(st.session_state["ID"])
+#st.write(st.session_state["ID"])
+#st.write(st.session_state["Nome"])
 
+#creare form con caselle di testo
+#dopo vedere se si possono precompilare con valori
 st.write("Nome: ")
 st.write("Cognome: ")
 st.write("Descrizione problema: ")
