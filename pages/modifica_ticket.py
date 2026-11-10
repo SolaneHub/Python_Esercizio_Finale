@@ -100,5 +100,6 @@ with st.form("form_modifica_ticket"):
     # garantendo coerenza immediata se la pagina viene ricaricata o consultata di nuovo.
     st.session_state["riga_selezionata"] = df.loc[id_selezionato]
 
-    st.success("Modifiche salvate con successo nel database!")
+    st.success("Modifiche salvate con successo nel databasee!")
+    
 
