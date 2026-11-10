@@ -76,18 +76,18 @@ with st.form("form_modifica_ticket"):
   # Il pulsante di invio del form attiva il blocco condizionale sottostante
   # esclusivamente quando l'utente decide di confermare cliccando su "Salva Modifiche".
   submit_modifica = st.form_submit_button(
-      "Salva Modifiche", use_container_width=True
+      "Salva Modifiche", width='stretch'
   )
 
   if submit_modifica:
     # A. Ricarichiamo il database CSV fresco dal disco per evitare conflitti o dati obsoleti
-    df = pd.read_csv("dati.csv")
+    df = pd.read_csv("dati.csv", dtype={'Cellulare': 'str'}) #Cellulare salvato come string per compatibilità
     df = df.set_index("ID")
 
     # B. Aggiorniamo le celle mirate del DataFrame sfruttando l'ID come chiave di ricerca riga (.loc)
     df.loc[id_selezionato, "Nome"] = nuovo_nome
     df.loc[id_selezionato, "Cognome"] = nuovo_cognome
-    df.loc[id_selezionato, "Cellulare"] = nuovo_cellulare
+    df.loc[id_selezionato, "Cellulare"] = str(nuovo_cellulare) # un'altra conversione str per evitare incompatibilità
     df.loc[id_selezionato, "email"] = nuova_email
     df.loc[id_selezionato, "Descrizione"] = nuova_descrizione
 

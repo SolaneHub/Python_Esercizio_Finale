@@ -1,7 +1,8 @@
 import pandas as pd
 import streamlit as st
 
-df = pd.read_csv("dati.csv")
+#Nel caricamento del df, Cellulare va salvato come string per evitare problemi di incompatibilità
+df = pd.read_csv("dati.csv", dtype={'Cellulare': 'str'})
 df = df.set_index("ID")
 
 #configurazione pagina
@@ -15,7 +16,7 @@ st.write("Ticket in attesa.")
 #"evento" è l'oggetto che contiene le informazioni di interazione con la tabella
 evento = st.dataframe(
     df,
-    use_container_width=True, #utilizza tutta la larghezza disponibile
+    width="stretch", #utilizza tutta la larghezza disponibile
     selection_mode="single-row", #seleziona una sola riga alla volta
     on_select="rerun", #"rerun": quando selezioni una riga riesegue lo script e aggiorna l'evento
 )
