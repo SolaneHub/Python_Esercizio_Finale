@@ -58,16 +58,16 @@ with st.form("form_modifica_ticket"):
     nuovo_nome = st.text_input("Nome:", value=str(riga["Nome"]))
     nuovo_cognome = st.text_input("Cognome:", value=str(riga["Cognome"]))
     nuovo_cellulare = st.text_input(
-        "Contatto cellulare:", value=str(riga["Contatto cellulare"])
+        "Contatto cellulare:", value=str(riga["Cellulare"])
     )
 
   with col2:
     nuova_email = st.text_input(
-        "Contatto e-mail:", value=str(riga["Contatto e-mail"])
+        "Contatto e-mail:", value=str(riga["email"])
     )
     # st.text_area viene usato al posto di text_input per gestire descrizioni lunghe multilinea
     nuova_descrizione = st.text_area(
-        "Descrizione problema:", value=str(riga["Descrizione problema"])
+        "Descrizione problema:", value=str(riga["Descrizione"])
     )
 
   # =====================================================================
@@ -87,9 +87,9 @@ with st.form("form_modifica_ticket"):
     # B. Aggiorniamo le celle mirate del DataFrame sfruttando l'ID come chiave di ricerca riga (.loc)
     df.loc[id_selezionato, "Nome"] = nuovo_nome
     df.loc[id_selezionato, "Cognome"] = nuovo_cognome
-    df.loc[id_selezionato, "Contatto cellulare"] = nuovo_cellulare
-    df.loc[id_selezionato, "Contatto e-mail"] = nuova_email
-    df.loc[id_selezionato, "Descrizione problema"] = nuova_descrizione
+    df.loc[id_selezionato, "Cellulare"] = nuovo_cellulare
+    df.loc[id_selezionato, "email"] = nuova_email
+    df.loc[id_selezionato, "Descrizione"] = nuova_descrizione
 
     # C. Salvataggio su file:
     # `reset_index()` riporta l'indice (ID) a normale colonna tabellare prima di esportare in CSV.
@@ -102,4 +102,3 @@ with st.form("form_modifica_ticket"):
 
     st.success("Modifiche salvate con successo nel databasee!")
     
-

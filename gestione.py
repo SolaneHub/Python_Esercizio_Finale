@@ -28,10 +28,15 @@ if righe_selezionate:
   #stampa ID selezionato
   id_selezionato = df.index[righe_selezionate[0]]
   st.success(f"Ticket selezionato: ID {id_selezionato}")
-  st.session_state["ID"] = id_selezionato
+
+  #passaggio variabili per la form tramite riga
+  riga_selezionata = df.loc[id_selezionato]
+  st.session_state["riga_selezionata"] = riga_selezionata
+
   #st.link_button("Modifica Ticket", "/modifica_ticket")
   if st.button("Modifica Ticket"):
     st.switch_page("pages/modifica_ticket.py")
-  st.write(st.session_state["ID"])
 
-
+  #test accesso a elemento della riga
+  st.write(st.session_state["riga_selezionata"]['Nome'])
+  
