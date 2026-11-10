@@ -6,6 +6,17 @@ df = df.set_index("ID")
 
 st.set_page_config(page_title="My Application", layout="wide")
 
+#dichiariamo altre pagine
+pagina_modifica = st.Page("pages/modifica_ticket.py", title="Modifica ticket")
+
+#nav è l'oggetto di navigazione
+nav = st.navigation(
+    [pagina_modifica],
+    position="hidden"
+)
+nav.run()
+
+
 st.title("Gestore Ticket")
 st.header("Lista")
 st.write("Ticket in attesa.")
@@ -32,5 +43,7 @@ if righe_selezionate:
   #pulsante
   if st.button("Modifica ticket selezionato"):
     st.session_state["ticket_id"] = id_selezionato
-    st.switch_page("modifica_ticket.py")
-    st.rerun()
+
+    #Quando usi st.switch_page(), 
+    # Streamlit interrompe l'esecuzione corrente e passa direttamente alla nuova pagina
+    st.switch_page(pagina_modifica)
