@@ -35,13 +35,20 @@ if selezioni:
   riga_selezionata = df.loc[id_selezionati[0]]
   st.session_state["riga_selezionata"] = riga_selezionata
 
-  if st.button("🗑"):
-    pass
+  #colonne per tasti. size in x/6
+  col1, col2 = st.columns(2)
 
-  #st.link_button("Modifica Ticket", "/modifica_ticket")
-  if len(selezioni) == 1:
-    if st.button("Modifica Ticket"):
-      st.switch_page("pages/modifica_ticket.py")
+  #elimina
+  with col1:
+    if st.button("🗑"):
+      pass
+
+  #modifica
+  with col2:
+    if len(selezioni) == 1:
+      if st.button("Modifica Ticket"):
+        st.switch_page("pages/modifica_ticket.py")
+  
 
 #test righe selezionate
 st.write("ID selezionate: ", evento.selection.rows)
