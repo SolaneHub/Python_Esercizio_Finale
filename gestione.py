@@ -1,6 +1,24 @@
 import pandas as pd
 import streamlit as st
 
+def EliminaTicket(df, id_selezionati):
+  for id in id_selezionati:
+    df = df.drop(index=id)
+    df.reset_index().to_csv("dati.csv", index=False)
+
+@st.dialog("Conferma elimina")
+def PopupElimina(df, id_selezionati):
+    st.write(f"Vuoi eliminare {id_selezionati.tolist()}?")
+
+    col1, col2 = st.columns(2)
+    with col1:
+        if st.button("Annulla"):
+            st.rerun()
+    with col2:
+        if st.button("Sì"):
+            EliminaTicket(df, id_selezionati)
+            st.rerun()
+
 #Nel caricamento del df, Cellulare va salvato come string per evitare problemi di incompatibilità
 df = pd.read_csv("dati.csv", dtype={'Cellulare': 'str'})
 df = df.set_index("ID")
@@ -61,8 +79,10 @@ st.markdown(
 )
 
 st.title("Gestore Ticket")
-st.header("Lista")
-st.write("Ticket in attesa.")
+st.header("Lista ticket in attesa")
+
+if st.button("Crea Ticket"):
+  st.switch_page("pages/crea_ticket.py")
 
 # Tabella intera con selezione riga attiva
 #"evento" è l'oggetto che contiene le informazioni di interazione con la tabella
@@ -80,27 +100,23 @@ selezioni = evento.selection.rows
 if selezioni:
   #stampa ID selezionato
   id_selezionati = df.index[selezioni]
-  st.success(f"Ticket selezionati: ID {id_selezionati}")
+  st.success(f"Ticket selezionati: ID {id_selezionati.tolist()}")
 
-  #passaggio variabili per la form tramite riga
-
+  #passaggio riga da modificare tramite session_state
   riga_selezionata = df.loc[id_selezionati[0]]
   st.session_state["riga_selezionata"] = riga_selezionata
 
-  #colonne per tasti. size in x/6
-  col1, col2 = st.columns(2)
+  #colonne per tasti. size per ognuno in []
+  col1, col2, col3 = st.columns([1,2,5])
 
   #elimina
   with col1:
     if st.button("🗑"):
-      pass
-
+      PopupElimina(df, id_selezionati)
   #modifica
   with col2:
     if len(selezioni) == 1 and st.button("Modifica Ticket"):
       st.switch_page("pages/modifica_ticket.py")
-
-
-#test righe selezionate
-st.write("ID selezionate: ", evento.selection.rows)
-
+  #spazio vuoto
+  with col3:
+    pass
