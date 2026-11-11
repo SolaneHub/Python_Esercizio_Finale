@@ -296,7 +296,7 @@ with st.form("form_modifica_ticket"):
     df.loc[id_selezionato, "Cellulare"] = cellulare_completo
     df.loc[id_selezionato, "email"] = nuova_email
     df.loc[id_selezionato, "Descrizione"] = nuova_descrizione
-    df.loc[id_selezionato, "Data"] = nuova_data
+    df.loc[id_selezionato, "Data"] = nuova_data.strftime("%Y-%m-%d")
 
     # C. Salvataggio su file:
     # `reset_index()` riporta l'indice (ID) a normale colonna tabellare prima di esportare in CSV.

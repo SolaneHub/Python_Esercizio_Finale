@@ -269,7 +269,7 @@ with st.form("form_crea_ticket"):
           'Cellulare': cellulare_completo,
           'email': nuova_email,
           'Descrizione': nuova_descrizione,
-          'Data': nuova_data
+          'Data': nuova_data.strftime("%Y-%m-%d")
         }],
       index = [id_nuovo]
     )
