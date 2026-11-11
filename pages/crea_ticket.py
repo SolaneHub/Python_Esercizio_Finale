@@ -7,6 +7,7 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+from datetime import date
 
 from prefissi import get_prefissi_internazionali, separa_prefisso_e_numero
 
@@ -233,6 +234,11 @@ with st.form("form_crea_ticket"):
         max_chars=256,
         key="descrizione_ticket",
     )
+    nuova_data = st.date_input(
+    "Seleziona una data",
+    value= date.today(),
+    format="DD/MM/YYYY",
+    )
 
   # =====================================================================
   # 5. GESTIONE DELL'INVIO (SUBMIT) E AGGIORNAMENTO PERSISTENTE (CSV)
@@ -263,6 +269,7 @@ with st.form("form_crea_ticket"):
           'Cellulare': cellulare_completo,
           'email': nuova_email,
           'Descrizione': nuova_descrizione,
+          'Data': nuova_data
         }],
       index = [id_nuovo]
     )

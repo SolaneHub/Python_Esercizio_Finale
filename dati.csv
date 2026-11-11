@@ -1,5 +1,50 @@
-ID,Nome,Cognome,Descrizione,Cellulare,email
-3013,Luigi,Rossi,Computer non si accende,393331234587,mario.rossi@example.com
-4562,Lorelei,Bianchissimi,Problemi Wi-Fi e giga,393401238767,laura.bianchiii@example.com
-7076,Giuseppe,Verdi,Stampante non funziona,393491234576,giuseppe.verdi@example.com
-7077,Super,Luigi,Lavatrice rotta,+39333 333 4444,hjhjhhhik@gmail.com
+ID,Nome,Cognome,Descrizione,Cellulare,email,Data
+3013,Luigi,Rossi,Computer non si accende,393331234587,mario.rossi@example.com,2026-11-01
+4562,Lorelei,Bianchissimi,Problemi Wi-Fi e giga,393401238767,laura.bianchiii@example.com,2026-11-02
+7076,Giuseppe,Verdi,Stampante non funziona,393491234576,giuseppe.verdi@example.com,2026-11-03
+7077,Super,Luigi,Lavatrice rotta,+39333 333 4444,hjhjhhhik@gmail.com,2026-05-02
+7078,Marco,Bianchi,Schermo del PC nero,393401112233,marco.bianchi@example.com,2026-11-04
+7079,Anna,Ferrari,Password dimenticata,393401223344,anna.ferrari@example.com,2026-11-04
+7080,Paolo,Ricci,Connessione Internet lenta,393402334455,paolo.ricci@example.com,2026-11-04
+7081,Sara,Romano,Mouse non funzionante,393403445566,sara.romano@example.com,2026-11-05
+7082,Andrea,Conti,Problemi con Outlook,393404556677,andrea.conti@example.com,2026-11-05
+7083,Elena,Marino,Telefono non si ricarica,393405667788,elena.marino@example.com,2026-11-05
+7084,Francesco,Greco,PC molto lento,393406778899,francesco.greco@example.com,2026-11-06
+7085,Giulia,Bruno,Errore durante aggiornamento Windows,393407889900,giulia.bruno@example.com,2026-11-06
+7086,Matteo,Gallo,Problemi con la rete aziendale,393408990011,matteo.gallo@example.com,2026-11-06
+7087,Chiara,Fontana,Tastiera non risponde,393409001122,chiara.fontana@example.com,2026-11-07
+7088,Luca,Moretti,File cancellati accidentalmente,393410112233,luca.moretti@example.com,2026-11-07
+7089,Martina,Barbieri,Monitor senza segnale,393411223344,martina.barbieri@example.com,2026-11-07
+7090,Simone,Leone,Account bloccato,393412334455,simone.leone@example.com,2026-11-07
+7091,Valentina,Serra,Problemi con VPN,393413445566,valentina.serra@example.com,2026-11-08
+7092,Alessandro,Marchetti,Hard disk non riconosciuto,393414556677,alessandro.marchetti@example.com,2026-11-08
+7093,Francesca,Longo,Applicazione non si apre,393415667788,francesca.longo@example.com,2026-11-08
+7094,Roberto,De Luca,Stampante offline,393416778899,roberto.deluca@example.com,2026-11-08
+7095,Silvia,Giordano,Problemi audio durante videochiamata,393417889900,silvia.giordano@example.com,2026-11-09
+7096,Gabriele,Caruso,Computer si spegne da solo,393418990011,gabriele.caruso@example.com,2026-11-09
+7097,Alessia,Vitale,Impossibile accedere alla posta,393419001122,alessia.vitale@example.com,2026-11-09
+7098,Daniele,Mariani,Router non funzionante,393420112233,daniele.mariani@example.com,2026-11-09
+7099,Beatrice,Colombo,Schermo del telefono rotto,393421223344,beatrice.colombo@example.com,2026-11-10
+7100,Stefano,Esposito,Problemi con Excel,393422334455,stefano.esposito@example.com,2026-11-10
+7101,Claudia,Testa,PC non riconosce USB,393423445566,claudia.testa@example.com,2026-11-10
+7102,Filippo,Grassi,Memoria del computer piena,393424556677,filippo.grassi@example.com,2026-11-10
+7103,Noemi,Pellegrini,Problemi con antivirus,393425667788,noemi.pellegrini@example.com,2026-11-11
+7104,Tommaso,Rinaldi,Webcam non rilevata,393426778899,tommaso.rinaldi@example.com,2026-11-11
+7105,Elisa,Martini,Impossibile stampare PDF,393427889900,elisa.martini@example.com,2026-11-11
+7106,Leonardo,Farina,Errore connessione server,393428990011,leonardo.farina@example.com,2026-11-11
+7107,Gaia,Fontanella,Problemi con Bluetooth,393429001122,gaia.fontanella@example.com,2026-11-11
+7108,Enrico,Monti,Batteria laptop non dura,393430112233,enrico.monti@example.com,2026-11-11
+7109,Veronica,Amato,Account email compromesso,393431223344,veronica.amato@example.com,2026-11-11
+7110,Michele,Costa,Errore installazione software,393432334455,michele.costa@example.com,2026-11-11
+7111,Serena,Fabbri,Schermo lampeggiante,393433445566,serena.fabbri@example.com,2026-11-11
+7112,Diego,Messina,Problemi con backup,393434556677,diego.messina@example.com,2026-11-11
+7113,Ilaria,Parisi,Telefono non rileva SIM,393435667788,ilaria.parisi@example.com,2026-11-11
+7114,Christian,Fiore,PC non si collega al Wi-Fi,393436778899,christian.fiore@example.com,2026-11-11
+7115,Rebecca,De Santis,Problemi con Google Drive,393437889900,rebecca.desantis@example.com,2026-11-11
+7116,Antonio,Marini,Disco SSD danneggiato,393438990011,antonio.marini@example.com,2026-11-11
+7117,Martina,Silvestri,Microfono non funzionante,393439001122,martina.silvestri@example.com,2026-11-11
+7118,Edoardo,Pagani,Errore accesso gestionale,393440112233,edoardo.pagani@example.com,2026-11-11
+7119,Carolina,Palumbo,Problemi con caricamento pagine web,393441223344,carolina.palumbo@example.com,2026-11-11
+7120,Alberto,Orlando,PC non riconosce stampante,393442334455,alberto.orlando@example.com,2026-11-11
+7121,Monica,De Angelis,Problemi con sincronizzazione file,393443445566,monica.deangelis@example.com,2026-11-11
+7122,Nicola,Benedetti,Errore schermata blu,393444556677,nicola.benedetti@example.com,2026-11-11

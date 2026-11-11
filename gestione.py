@@ -68,3 +68,4 @@ if selezioni:
   #spazio vuoto
   with col3:
     pass
+

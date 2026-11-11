@@ -28,7 +28,7 @@ try:
         st.markdown("### 📝 Riepilogo Ticket")
         df_riepilogo = ticket_per_utente.reset_index()
         df_riepilogo.columns = ["Utente / Cliente", "Numero Ticket"]
-        st.dataframe(df_riepilogo, use_container_width=True, hide_index=True)
+        st.dataframe(df_riepilogo, width='stretch', hide_index=True)
 
     with col2:
         st.markdown("### 📈 Grafico Distribuzione Ticket")
@@ -63,6 +63,7 @@ try:
         ax.grid(axis="y", linestyle="--", alpha=0.2, color="#FFFFFF")
         ax.set_axisbelow(True)
 
+        #spine = bordo del grafico
         for spine in ["top", "right"]:
             ax.spines[spine].set_visible(False)
         for spine in ["left", "bottom"]:
@@ -83,7 +84,7 @@ try:
             )
 
         plt.tight_layout()
-        st.pyplot(fig, use_container_width=True)
+        st.pyplot(fig, width='stretch')
 
 except FileNotFoundError:
     st.error(

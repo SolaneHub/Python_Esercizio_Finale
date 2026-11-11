@@ -7,6 +7,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
+from datetime import date
+from datetime import datetime
 
 from prefissi import get_prefissi_internazionali, separa_prefisso_e_numero
 
@@ -263,6 +265,11 @@ with st.form("form_modifica_ticket"):
         max_chars=256,
         key="descrizione_ticket",
     )
+    nuova_data = st.date_input(
+    "Seleziona una data",
+    value= datetime.strptime(riga["Data"], "%Y-%m-%d"),
+    format="DD/MM/YYYY",
+    )
 
   # =====================================================================
   # 5. GESTIONE DELL'INVIO (SUBMIT) E AGGIORNAMENTO PERSISTENTE (CSV)
@@ -289,6 +296,7 @@ with st.form("form_modifica_ticket"):
     df.loc[id_selezionato, "Cellulare"] = cellulare_completo
     df.loc[id_selezionato, "email"] = nuova_email
     df.loc[id_selezionato, "Descrizione"] = nuova_descrizione
+    df.loc[id_selezionato, "Data"] = nuova_data
 
     # C. Salvataggio su file:
     # `reset_index()` riporta l'indice (ID) a normale colonna tabellare prima di esportare in CSV.
