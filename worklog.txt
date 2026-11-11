@@ -33,3 +33,12 @@ Abbiamo aggiunto una pagina analisi ticket con un grafico a barre matplotlib che
  assieme ad una tabella di riepilogo.
  Aggiunta colonna 'Data' in formato %Y-%m-%d che conserva la data associata al ticket, ed è stata aggiunta come field nelle
  pagine di creazione e modifica ticket.
+Pomeriggio
+Rivisitato completamente il design, layout e utilizzo degli spazi nella Home (list_view):
+ - Header compatto con titolo, sottotitolo e pulsanti rapidi ("Nuovo Ticket" e "Report") allineati orizzontalmente.
+ - Dashboard a 4 KPI metric cards (Totale Ticket, Clienti Unici, Ultimo Ticket e Stato Selezione interattivo).
+ - Toolbar integrata con ricerca full-text istantanea (ID, cliente, telefono, email, guasto) e opzioni di ordinamento.
+ - Tabella st.dataframe ottimizzata con column_config, altezze controllate e date formattate DD/MM/YYYY.
+ - Barra di azione contestuale posizionata subito sopra la tabella per accesso immediato a Modifica ed Elimina.
+ - Scheda rapida del ticket selezionato con visualizzazione completa di guasto e contatti.
+ - Popup di conferma eliminazione arricchito con riepilogo delle pratiche selezionate.
