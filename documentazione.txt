@@ -26,3 +26,10 @@ Risolti i problemi di incompatibilità dtype per la colonna Cellulare.
  Layout per la home aggiornata e ripulita del codice.
 
 to-do: grafico che mostra quantità ticket per ogni utente.
+
+* Mer11Nov2026
+Mattina
+Abbiamo aggiunto una pagina analisi ticket con un grafico a barre matplotlib che dimostra per ogni utente quanti ticket sono aperti,
+ assieme ad una tabella di riepilogo.
+ Aggiunta colonna 'Data' in formato %Y-%m-%d che conserva la data associata al ticket, ed è stata aggiunta come field nelle
+ pagine di creazione e modifica ticket.
