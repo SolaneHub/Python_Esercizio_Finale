@@ -293,7 +293,7 @@ with st.form("form_modifica_ticket"):
 
     df.loc[id_selezionato, "Nome"] = nuovo_nome
     df.loc[id_selezionato, "Cognome"] = nuovo_cognome
-    df.loc[id_selezionato, "Cellulare"] = cellulare_completo
+    df.loc[id_selezionato, "Cellulare"] = cellulare_completo.replace(" ", "")
     df.loc[id_selezionato, "email"] = nuova_email
     df.loc[id_selezionato, "Descrizione"] = nuova_descrizione
     df.loc[id_selezionato, "Data"] = nuova_data.strftime("%Y-%m-%d")

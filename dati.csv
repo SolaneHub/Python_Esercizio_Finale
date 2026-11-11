@@ -2,7 +2,7 @@ ID,Nome,Cognome,Descrizione,Cellulare,email,Data
 3013,Luigi,Rossi,Computer non si accende,393331234587,mario.rossi@example.com,2026-11-01
 4562,Lorelei,Bianchissimi,Problemi Wi-Fi e giga,393401238767,laura.bianchiii@example.com,2026-11-02
 7076,Giuseppe,Verdi,Stampante non funziona,393491234576,giuseppe.verdi@example.com,2026-11-03
-7077,Super,Luigi,Lavatrice rotta,+39333 333 4444,hjhjhhhik@gmail.com,2026-05-03
+7077,Super,Luigi,Lavatrice rotta,+393333334444,hjhjhhhik@gmail.com,2026-05-03
 7078,Marco,Bianchi,Schermo del PC nero,393401112233,marco.bianchi@example.com,2026-11-04
 7079,Anna,Ferrari,Password dimenticata,393401223344,anna.ferrari@example.com,2026-11-04
 7080,Paolo,Ricci,Connessione Internet lenta,393402334455,paolo.ricci@example.com,2026-11-04
@@ -48,3 +48,4 @@ ID,Nome,Cognome,Descrizione,Cellulare,email,Data
 7120,Alberto,Orlando,PC non riconosce stampante,393442334455,alberto.orlando@example.com,2026-11-11
 7121,Monica,De Angelis,Problemi con sincronizzazione file,393443445566,monica.deangelis@example.com,2026-11-11
 7122,Nicola,Benedetti,Errore schermata blu,393444556677,nicola.benedetti@example.com,2026-11-11
+7123,Luigi,Rossi,Guasto,+392223334444,lll@ooo.com,2026-11-11

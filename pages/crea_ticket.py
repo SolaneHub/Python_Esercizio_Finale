@@ -266,7 +266,7 @@ with st.form("form_crea_ticket"):
         [{
           'Nome': nuovo_nome,
           'Cognome': nuovo_cognome,
-          'Cellulare': cellulare_completo,
+          'Cellulare': cellulare_completo.replace(" ", ""),
           'email': nuova_email,
           'Descrizione': nuova_descrizione,
           'Data': nuova_data.strftime("%Y-%m-%d")

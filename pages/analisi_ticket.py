@@ -1,9 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
-
-df = pd.read_csv("dati.csv", dtype={'Cellulare': 'str'})
-df = df.set_index("ID")
+from matplotlib.ticker import MultipleLocator
 
 st.set_page_config(page_title="Statistica", layout="wide", initial_sidebar_state="collapsed")
 
@@ -20,71 +18,70 @@ try:
     )
     df["Utente"] = df["Utente"].str.strip()
 
-    ticket_per_utente = df["Utente"].value_counts()
+    df_riepilogo = (
+    df["Utente"]
+    .value_counts()
+    .reset_index()
+    )  
 
-    col1, col2 = st.columns([1, 1.2], gap="medium")
+    df_riepilogo.columns = ["Utente", "Numero Ticket"]
 
+    df_riepilogo = df_riepilogo.sort_values(
+        by=["Numero Ticket", "Utente"],
+        ascending=[False, True]
+    ).reset_index(drop=True)
+
+    #GRAFICO A BARRE
+    st.markdown("### 📈 Grafico Distribuzione Ticket")
+
+    # Configurazione grafico per Dark Mode / tema scuro
+    fig, ax = plt.subplots(figsize=(8, 6), facecolor="none")
+    ax.set_facecolor("none")
+    #dimensione label
+    ax.tick_params(axis="both", labelsize=6, colors="#BBBBBB")
+    #dimensione x, tick
+    ax.set_xlim(left=0, right=5)
+    ax.xaxis.set_major_locator(MultipleLocator(1))
+
+    bars = ax.barh(
+    df_riepilogo["Utente"],
+    df_riepilogo["Numero Ticket"],
+    color="#4A90E2",
+    edgecolor="#4A90E2",
+    height=0.1,
+    )
+
+    ax.set_ylabel(
+        "Utente", fontsize=10, fontweight="bold", color="#CCCCCC"
+    )
+    ax.set_title(
+        "Numero di Ticket",
+        fontsize=12,
+        fontweight="bold",
+        color="#FFFFFF",
+        pad=12,
+    )
+
+    ax.grid(axis="y", linestyle="--", alpha=0.2, color="#FFFFFF")
+    ax.set_axisbelow(True)
+
+    #spine = bordo del grafico
+    for spine in ["top", "right"]:
+        ax.spines[spine].set_visible(False)
+    for spine in ["left", "bottom"]:
+        ax.spines[spine].set_color("#555555")
+
+    plt.tight_layout()
+    st.pyplot(fig, width='stretch')
+
+    col1, col2 = st.columns([1,1])
     with col1:
+        #RIEPILOGO
         st.markdown("### 📝 Riepilogo Ticket")
-        df_riepilogo = ticket_per_utente.reset_index()
-        df_riepilogo.columns = ["Utente / Cliente", "Numero Ticket"]
         st.dataframe(df_riepilogo, width='stretch', hide_index=True)
-
     with col2:
-        st.markdown("### 📈 Grafico Distribuzione Ticket")
+        pass
 
-        # Configurazione grafico per Dark Mode / tema scuro
-        fig, ax = plt.subplots(figsize=(6, 3.8), facecolor="none")
-        ax.set_facecolor("none")
-
-        bars = ax.bar(
-            ticket_per_utente.index,
-            ticket_per_utente.values,
-            color="#4A90E2",
-            edgecolor="#555555",
-            linewidth=1,
-            width=0.45,
-        )
-
-        ax.set_ylabel(
-            "Numero di Ticket", fontsize=10, fontweight="bold", color="#CCCCCC"
-        )
-        ax.set_title(
-            "Quantità di Ticket per Utente",
-            fontsize=12,
-            fontweight="bold",
-            color="#FFFFFF",
-            pad=12,
-        )
-
-        ax.tick_params(colors="#CCCCCC", labelsize=9)
-        plt.xticks(rotation=25, ha="right")
-
-        ax.grid(axis="y", linestyle="--", alpha=0.2, color="#FFFFFF")
-        ax.set_axisbelow(True)
-
-        #spine = bordo del grafico
-        for spine in ["top", "right"]:
-            ax.spines[spine].set_visible(False)
-        for spine in ["left", "bottom"]:
-            ax.spines[spine].set_color("#555555")
-
-        # Etichette dei valori sopra ogni barra
-        for bar in bars:
-            yval = bar.get_height()
-            ax.text(
-                bar.get_x() + bar.get_width() / 2.0,
-                yval + 0.04,
-                str(int(yval)),
-                ha="center",
-                va="bottom",
-                color="#FFFFFF",
-                fontweight="bold",
-                fontsize=9.5,
-            )
-
-        plt.tight_layout()
-        st.pyplot(fig, width='stretch')
 
 except FileNotFoundError:
     st.error(
