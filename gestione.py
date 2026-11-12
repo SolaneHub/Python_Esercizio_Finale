@@ -5,49 +5,9 @@ from typing import Any
 
 import pandas as pd
 import streamlit as st
+import base64
 
-# Polyfill per il supporto delle emoji delle bandiere e rotazione frecce
-FLAG_EMOJI_CSS = """
-<style>
-@font-face {
-  font-family: 'Twemoji Country Flags';
-  unicode-range: U+1F1E6-1F1FF, U+1F3F4, U+E0062-E0063, U+E0065, U+E0067, U+E006C, U+E006E, U+E0073-E0074, U+E0077, U+E007F;
-  src: url('https://cdn.jsdelivr.net/npm/country-flag-emoji-polyfill@0.1/dist/TwemojiCountryFlags.woff2') format('woff2');
-  font-display: swap;
-}
-*, html, body, [class*="css"], [data-baseweb="select"], [data-baseweb="popover"], [data-baseweb="menu"], li, div, span, input, select {
-  font-family: 'Twemoji Country Flags', 'Source Sans Pro', sans-serif;
-}
-button[aria-label*="Help"],
-button[aria-label*="Help"] svg,
-button[data-testid="stTooltipHoverTarget"],
-button[data-testid="stTooltipHoverTarget"] svg {
-  transform: none !important;
-  transition: none !important;
-}
-button[aria-label="Open"] {
-  cursor: pointer !important;
-}
-button[aria-label="Open"] svg {
-  transition: transform 0.25s ease-in-out !important;
-  transform-origin: center center !important;
-  pointer-events: none !important;
-}
-button[aria-label="Open"][aria-expanded="true"] svg,
-button[aria-label="Open"][data-pressed="true"] svg,
-:has(input[role="combobox"]:focus) button[aria-label="Open"] svg,
-:has(input[role="combobox"][data-focused="true"]) button[aria-label="Open"] svg,
-:has(input[role="combobox"][aria-expanded="true"]) button[aria-label="Open"] svg,
-div[data-testid="stSelectbox"]:focus-within button[aria-label="Open"] svg,
-div[data-testid="stSelectbox"]:has(input[data-focused="true"]) button[aria-label="Open"] svg,
-div[data-testid="stSelectbox"]:has(input[aria-expanded="true"]) button[aria-label="Open"] svg,
-input[role="combobox"]:focus ~ button[aria-label="Open"] svg,
-input[role="combobox"][data-focused="true"] ~ button[aria-label="Open"] svg,
-input[role="combobox"][aria-expanded="true"] ~ button[aria-label="Open"] svg {
-  transform: rotate(180deg) !important;
-}
-</style>
-"""
+
 
 
 def EliminaTicket(df: pd.DataFrame, id_selezionati: list[Any]) -> None:
@@ -98,13 +58,91 @@ def _formatta_data_italiana(data_str: Any) -> str:
 
 
 def main() -> None:
-    """Funzione principale per il rendering della Home."""
+
+    def get_image_base64(path):
+        with open(path, "rb") as f:
+            return base64.b64encode(f.read()).decode("utf-8")
+
+    logo_base64 = get_image_base64("assets/logo.png")
+
+    # STILE BARRA TITOLO
+    st.markdown("""
+    <style>
+        /* Force Orbitron globally across all text, markdown, and headers */
+        html, body, [class*="css"] {
+            font-family: 'Orbitron', sans-serif !important;
+        }
+        /* Ensure headers also use the font */
+        h1, h2, h3, h4, h5, h6 {
+        font-family: 'Orbitron', sans-serif !important;
+        }
+
+        .stMainBlockContainer {
+            padding-top: 0 !important;
+        }
+
+        .titlebar {
+            position: relative;
+            left: 50%;
+            width: 100vw;
+            transform: translateX(-50%);
+            box-sizing: border-box;
+
+            background-color: #1E3A5F;
+            color: white;
+
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+
+        /* Make the link take over the flex layout and strip default anchor underlines */
+        .titlebar-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 20px 30px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .titlebar-link {
+            color: white;
+            text-decoration: none;
+        }
+
+        .titlebar img {
+            width: 50px;
+            height: 50px;
+            object-fit: contain;
+        }
+
+        .titlebar h1 {
+            color: white;
+            margin: 0;
+            padding: 0;
+            padding-top: 8px;
+            font-size: 48px;
+            text-decoration: none !important;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    #BARRA TITOLO
+    st.markdown(f"""
+    <div class="titlebar">
+        <a href="/" class="titlebar-link">
+            <img src="data:image/png;base64,{logo_base64}" alt="Logo">
+            <h1>Help Desk Manager</h1>
+        </a>
+    </div>
+    """, unsafe_allow_html=True)
+
     st.set_page_config(
         page_title="Home - Gestore Ticket",
         layout="wide",
         initial_sidebar_state="collapsed",
+        page_icon="assets/logo.png"
     )
-    st.markdown(FLAG_EMOJI_CSS, unsafe_allow_html=True)
 
     # Caricamento del dataset
     dati_path = Path("dati.csv")

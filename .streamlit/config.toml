@@ -1,7 +1,27 @@
+[server]
+enableStaticServing = true
+
 [theme]
 base = "dark"
 primaryColor = "#007bc2"
 backgroundColor = "#11172b"
 secondaryBackgroundColor = "#233a52"
 textColor = "#F5F5F5"
-font = "sans serif"
+
+# Activate the font natively for everything
+font = "Orbitron"
+headingFont = "Orbitron"
+
+# Register Regular Weight
+[[theme.fontFaces]]
+family = "Orbitron"
+url = "app/static/fonts/Orbitron-Regular.ttf"
+weight = 400
+style = "normal"
+
+# Register Bold Weight
+[[theme.fontFaces]]
+family = "Orbitron"
+url = "app/static/fonts/Orbitron-Bold.ttf"
+weight = 700
+style = "normal"

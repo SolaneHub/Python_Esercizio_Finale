@@ -33,7 +33,7 @@ st.markdown(
 
     /* Applica il font delle bandiere a tutti i componenti inclusi i menu a tendina */
     *, html, body, [class*="css"], [data-baseweb="select"], [data-baseweb="popover"], [data-baseweb="menu"], li, div, span, input, select {
-      font-family: 'Twemoji Country Flags', 'Source Sans Pro', sans-serif;
+      font-family: 'Twemoji Country Flags', 'Orbitron', sans-serif;
     }
 
     /* Blocca categoricamente qualsiasi rotazione o animazione sul pulsante help/tooltip (?) */
