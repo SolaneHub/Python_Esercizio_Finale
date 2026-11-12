@@ -87,7 +87,6 @@ st.markdown(f"""
 
 
 st.title("Analisi gestione dati")
-st.header("Conteggio ticket per utente")
 
 try:
     df = pd.read_csv("dati.csv", dtype={"Cellulare": "str"})
@@ -102,7 +101,7 @@ try:
 
     df = df.dropna(subset=["Data"])
 
-    st.title("Andamento segnalazioni")
+    st.header("Andamento segnalazioni")
 
     periodo = st.selectbox(
         "Seleziona periodo",

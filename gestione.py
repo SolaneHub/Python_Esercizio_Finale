@@ -7,14 +7,13 @@ import pandas as pd
 import streamlit as st
 import base64 #importo file in html
 
-
+#FUNZIONI
 def EliminaTicket(df: pd.DataFrame, id_selezionati: list[Any]) -> None:
     """Elimina i ticket selezionati e aggiorna dati.csv."""
     for id_val in id_selezionati:
         if id_val in df.index:
             df = df.drop(index=id_val)
     df.reset_index().to_csv("dati.csv", index=False)
-
 
 @st.dialog("Conferma eliminazione ticket")
 def PopupElimina(df: pd.DataFrame, id_selezionati: list[Any]) -> None:
@@ -43,7 +42,6 @@ def PopupElimina(df: pd.DataFrame, id_selezionati: list[Any]) -> None:
             st.session_state.pop("riga_selezionata", None)
             st.rerun()
 
-
 def _formatta_data_italiana(data_str: Any) -> str:
     """Formatta una data YYYY-MM-DD in formato italiano DD/MM/YYYY."""
     if not data_str or pd.isna(data_str):
@@ -62,7 +60,7 @@ logo_base64 = get_image_base64("pages/assets/logo.png")
 
 def main() -> None:
 
-    # STILE BARRA TITOLO
+    # STILE BARRA TITOLO (CSS)
     st.markdown("""
     <style>
         /* Force Orbitron globally across all text, markdown, and headers */
@@ -124,7 +122,7 @@ def main() -> None:
     </style>
     """, unsafe_allow_html=True)
 
-    #BARRA TITOLO
+    #BARRA TITOLO (HTML)
     st.markdown(f"""
     <div class="titlebar">
         <a href="/" class="titlebar-link">
@@ -140,6 +138,11 @@ def main() -> None:
         layout="wide",
         initial_sidebar_state="collapsed",
         page_icon="pages/assets/logo.png"
+    )
+    st.logo(
+    image="pages/assets/logo.png",      # Percorso del logo principale
+    icon_image="pages/assets/logo.png", # Icona mostrata quando si clicca su '<<' per chiudere la sidebar
+    size="large"                  # Opzioni: "small", "medium", "large"
     )
 
     # Caricamento del dataset
