@@ -132,7 +132,7 @@ def main() -> None:
     </div>
     """, unsafe_allow_html=True)
 
-
+    #Configurazione pagina
     st.set_page_config(
         page_title="Home - Gestore Ticket",
         layout="wide",
@@ -157,7 +157,7 @@ def main() -> None:
         )
         df.index.name = "ID"
 
-    # 1. Header Hero con azioni principali allineate
+    # 1. Header Gestore Ticket con azioni principali allineate
     col_title, col_actions = st.columns([3, 1.3], vertical_alignment="center")
     with col_title:
         st.title("📋 Gestore Ticket")
@@ -215,6 +215,7 @@ def main() -> None:
     df_visualizzato = df.copy()
     cerca_pulito = cerca.strip() if cerca else ""
 
+    #Ricerca filtrata
     if cerca_pulito:
         nome_completo = (
             df_visualizzato["Nome"].fillna("")
@@ -246,6 +247,7 @@ def main() -> None:
         )
         df_visualizzato = df_visualizzato[maschera]
 
+    #Ordinamento
     if ordinamento == "ID Decrescente (Nuovi prima)":
         df_visualizzato = df_visualizzato.sort_index(ascending=False)
     elif ordinamento == "ID Crescente (Meno recenti)":
@@ -259,6 +261,7 @@ def main() -> None:
             by=["Cognome", "Nome"], ascending=True
         )
 
+    #totale ticket
     with col_reset:
         totale_totali = len(df)
         totale_filtrati = len(df_visualizzato)
@@ -275,16 +278,16 @@ def main() -> None:
                 unsafe_allow_html=True,
             )
 
-    # 4. Schede KPI di riepilogo
+    # 4. Schede KPI di riepilogo (statistiche) (Key Performance Indicators)
     kpi_col1, kpi_col2, kpi_col3, kpi_col4 = st.columns(4)
-    with kpi_col1:
+    with kpi_col1: #totale ticket
         st.metric(
             label="Totale Ticket",
             value=len(df),
             help="Numero complessivo di pratiche registrate nel database",
             border=True,
         )
-    with kpi_col2:
+    with kpi_col2: #clienti unici
         clienti_unici = (
             df[["Nome", "Cognome"]].drop_duplicates().shape[0] if not df.empty else 0
         )
@@ -294,7 +297,7 @@ def main() -> None:
             help="Numero di clienti distinti serviti dal laboratorio",
             border=True,
         )
-    with kpi_col3:
+    with kpi_col3: #ultimo ticket
         ultimo_id = int(df.index.max()) if not df.empty else None
         ultima_data_str = (
             df.loc[ultimo_id, "Data"]
@@ -313,7 +316,7 @@ def main() -> None:
     top_action_placeholder = st.container()
 
     if df_visualizzato.empty:
-        with kpi_col4:
+        with kpi_col4: #selezione
             st.metric(
                 label="Selezione",
                 value="Nessuna",
@@ -323,7 +326,8 @@ def main() -> None:
         st.warning(f"Nessun ticket trovato con i criteri di ricerca: '{cerca_pulito}'")
         return
 
-    # 5. Configurazione delle colonne e visualizzazione tabella interattiva
+    # 5. Configurazione delle colonne e visualizzazione tabella interattiva (dataframe)
+    #     Come un set di istruzioni per come presentare il dataframe in streamlit
     column_config = {
         "ID": st.column_config.NumberColumn(
             "ID",
@@ -364,6 +368,7 @@ def main() -> None:
         ),
     }
 
+    #oggetto per gestire selezione righe
     evento = st.dataframe(
         df_visualizzato,
         width="stretch",
@@ -374,8 +379,8 @@ def main() -> None:
         key="home_tickets_table",
     )
 
-    selezioni = evento.selection.rows
-    n_selezionati = len(selezioni)
+    selezioni = evento.selection.rows #elementi selezionati, in una lista
+    n_selezionati = len(selezioni) #numero di elementi selezionati
 
     with kpi_col4:
         st.metric(
@@ -390,7 +395,7 @@ def main() -> None:
             border=True,
         )
 
-    # 6. Azioni contestuali quando ci sono righe selezionate
+    # 6. Azioni contestuali quando ci sono righe selezionate (elimina, modifica)
     if selezioni:
         id_selezionati = df_visualizzato.index[selezioni].tolist()
         riga_selezionata = df_visualizzato.loc[id_selezionati[0]]

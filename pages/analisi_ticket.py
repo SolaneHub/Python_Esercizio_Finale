@@ -89,9 +89,9 @@ st.markdown(f"""
 st.title("Analisi gestione dati")
 
 try:
+    #Caricamento df
     df = pd.read_csv("dati.csv", dtype={"Cellulare": "str"})
     
-
     # Conversione date
     df["Data"] = pd.to_datetime(
         df["Data"],
@@ -103,6 +103,7 @@ try:
 
     st.header("Andamento segnalazioni")
 
+    #selectbox per periodo
     periodo = st.selectbox(
         "Seleziona periodo",
         ["Mensile", "Annuale"]
@@ -147,51 +148,50 @@ try:
 
     # Grafico Altair
     chart = (
-    alt.Chart(plot_data)
-    .mark_line(
-        color="#4F8BF9",
-        strokeWidth=3,
-        point=alt.OverlayMarkDef(
-            filled=True,
-            size=90,
-            color="#4F8BF9"
+        alt.Chart(plot_data)
+        .mark_line(
+            color="#4F8BF9",
+            strokeWidth=3,
+            point=alt.OverlayMarkDef(
+                filled=True,
+                size=90,
+                color="#4F8BF9"
+            )
+        )
+        .encode(
+            x=alt.X(
+                "Periodo:N",
+                sort=ordine,
+                title="Periodo",
+                axis=alt.Axis(labelAngle=0)
+            ),
+            y=alt.Y(
+                "Totale:Q",
+                title="Numero segnalazioni",
+                scale=alt.Scale(domainMin=0)
+            ),
+            tooltip=[
+                alt.Tooltip("Periodo:N"),
+                alt.Tooltip("Totale:Q")
+            ]
+        )
+        .properties(
+            height=350
         )
     )
-    .encode(
-        x=alt.X(
-            "Periodo:N",
-            sort=ordine,
-            title="Periodo",
-            axis=alt.Axis(labelAngle=0)
-        ),
-        y=alt.Y(
-            "Totale:Q",
-            title="Numero segnalazioni",
-            scale=alt.Scale(domainMin=0)
-        ),
-        tooltip=[
-            alt.Tooltip("Periodo:N"),
-            alt.Tooltip("Totale:Q")
-        ]
-    )
-    .properties(
-        height=350
-    )
-)
 
     st.altair_chart(
         chart,
         use_container_width=True
     )
 
-    # Debug: verifica dati
+
+    # Dati numerici in tabella
     with st.expander("Visualizza dati del grafico"):
         st.dataframe(plot_data)
 
 
-
-    ###############################à
-
+    #RIEPILOGO
     df["Utente"] = (
         df["Nome"].fillna("").astype(str)
         + " "
@@ -213,7 +213,6 @@ try:
     ).reset_index(drop=True)
 
 
-    #RIEPILOGO
     st.markdown("### 📝 Riepilogo Ticket")
     st.dataframe(df_riepilogo, width='stretch', hide_index=True)
 
