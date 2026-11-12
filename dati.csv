@@ -1,51 +1,301 @@
 ID,Nome,Cognome,Descrizione,Cellulare,email,Data
+7133,Sofia,Mancini,Batteria laptop scarica,395413982250,sofia.mancini10@example.com,2024-01-02
+7132,Irene,Villa,PC molto lento,399825198266,irene.villa9@example.com,2024-01-07
+7263,Riccardo,Conti,Problemi con Outlook,392326416987,riccardo.conti140@example.com,2024-01-24
+7181,Noemi,Caruso,Disco esterno non riconosciuto,395099418475,noemi.caruso58@example.com,2024-01-29
+7159,Camilla,Ferrara,Monitor senza segnale,398730378947,camilla.ferrara36@example.com,2024-02-10
+7164,Noemi,Romano,Stampante offline,399593915826,noemi.romano41@example.com,2024-02-22
+7207,Elena,Leone,Porta USB non funzionante,396660279311,elena.leone84@example.com,2024-02-23
+7161,Tommaso,Ferri,Memoria del computer esaurita,390481234382,tommaso.ferri38@example.com,2024-02-25
+7150,Elena,Marini,Problemi con Outlook,391919214736,elena.marini27@example.com,2024-02-26
+7359,Federico,Marchetti,Porta USB non funzionante,391820003134,federico.marchetti236@example.com,2024-02-29
+7208,Davide,Costa,PC molto lento,390534133958,davide.costa85@example.com,2024-03-03
+7275,Filippo,Leone,Tastiera non risponde,398177548390,filippo.leone152@example.com,2024-03-21
+7165,Beatrice,Romano,Errore connessione server,393435388196,beatrice.romano42@example.com,2024-03-25
+7234,Sofia,Villa,Errore aggiornamento Windows,397964670645,sofia.villa111@example.com,2024-03-27
+7210,Nicolo,Conti,Antivirus da configurare,392902977214,nicolo.conti87@example.com,2024-04-03
+7332,Sofia,Ferrara,Telefono non si ricarica,396290447248,sofia.ferrara209@example.com,2024-04-10
+7191,Emanuele,Russo,Telefono non si ricarica,399789728212,emanuele.russo68@example.com,2024-04-10
+7209,Irene,Leone,Batteria laptop scarica,396264427142,irene.leone86@example.com,2024-04-11
+7361,Lorenzo,Ferrara,Computer non si avvia,391598662407,lorenzo.ferrara238@example.com,2024-04-11
+7248,Marta,Ferrara,Mouse non funzionante,395150572961,marta.ferrara125@example.com,2024-04-14
+7317,Filippo,Conti,Audio non funzionante,397723260803,filippo.conti194@example.com,2024-04-21
+7321,Matteo,Leone,Problemi con VPN,393771771957,matteo.leone198@example.com,2024-04-22
+7188,Marta,Marini,Account bloccato,392315571086,marta.marini65@example.com,2024-04-24
+7308,Federico,Rinaldi,Disco esterno non riconosciuto,399818278764,federico.rinaldi185@example.com,2024-05-01
+7259,Riccardo,Conti,Stampante non rilevata,399055799181,riccardo.conti136@example.com,2024-05-01
+7333,Alice,Russo,Connessione Wi-Fi instabile,398918366528,alice.russo210@example.com,2024-05-06
+7310,Matteo,Greco,Computer si spegne improvvisamente,397398432518,matteo.greco187@example.com,2024-05-09
+7364,Alice,Serra,Schermo del PC nero,393232696152,alice.serra241@example.com,2024-05-10
+7129,Filippo,Barbieri,Problemi con VPN,392983639422,filippo.barbieri6@example.com,2024-05-15
+7141,Irene,Fontana,Problemi con VPN,396218256455,irene.fontana18@example.com,2024-05-19
+7199,Tommaso,Lombardi,Telefono non si ricarica,398558277529,tommaso.lombardi76@example.com,2024-05-20
+7136,Marta,Marini,Mouse non funzionante,395245785244,marta.marini13@example.com,2024-05-25
+7244,Noemi,Villa,Porta USB non funzionante,396144318393,noemi.villa121@example.com,2024-05-29
+7240,Federico,Marini,Schermo del PC nero,394638761949,federico.marini117@example.com,2024-05-31
+7233,Davide,Rinaldi,Webcam non rilevata,394912132471,davide.rinaldi110@example.com,2024-06-10
+7265,Giorgia,Leone,Webcam non rilevata,395539189251,giorgia.leone142@example.com,2024-06-16
+7354,Riccardo,Fontana,Memoria del computer esaurita,393332487654,riccardo.fontana231@example.com,2024-06-27
+7312,Irene,Barbieri,Mouse non funzionante,396239133626,irene.barbieri189@example.com,2024-07-10
+7220,Riccardo,Costa,Password account dimenticata,396433129421,riccardo.costa97@example.com,2024-07-10
+7242,Federico,Conti,Connessione Wi-Fi instabile,395191676858,federico.conti119@example.com,2024-07-10
+7311,Marta,Galli,Stampante offline,396809149499,marta.galli188@example.com,2024-07-22
+7355,Federico,Costa,Stampante non rilevata,399512534346,federico.costa232@example.com,2024-07-24
+7258,Riccardo,Serra,Applicazione non si apre,396199168467,riccardo.serra135@example.com,2024-07-24
+7314,Filippo,Fontana,Errore aggiornamento Windows,391323886605,filippo.fontana191@example.com,2024-07-28
+7144,Elena,Conti,Problemi con VPN,399111526726,elena.conti21@example.com,2024-07-31
+7296,Riccardo,Rinaldi,PC molto lento,390255554375,riccardo.rinaldi173@example.com,2024-08-04
+7245,Federico,Greco,Errore aggiornamento Windows,393422023628,federico.greco122@example.com,2024-08-05
+7146,Elena,Russo,Stampante non rilevata,390895851138,elena.russo23@example.com,2024-08-17
+7305,Elena,Marchetti,Account bloccato,395259577424,elena.marchetti182@example.com,2024-08-19
+7232,Riccardo,Barbieri,Disco esterno non riconosciuto,397444931637,riccardo.barbieri109@example.com,2024-09-11
+7152,Beatrice,Marini,Rete aziendale non disponibile,397334421496,beatrice.marini29@example.com,2024-09-12
+7224,Elena,Romano,Connessione Wi-Fi instabile,392729149243,elena.romano101@example.com,2024-09-12
+7134,Davide,Caruso,Stampante offline,391452842572,davide.caruso11@example.com,2024-09-14
+7322,Irene,Greco,Password account dimenticata,397871834529,irene.greco199@example.com,2024-09-16
+7205,Alice,Greco,Applicazione non si apre,395553136787,alice.greco82@example.com,2024-09-23
+7143,Nicolo,Barbieri,Computer non si avvia,399883187696,nicolo.barbieri20@example.com,2024-09-28
+7280,Lorenzo,Rinaldi,Batteria laptop scarica,398270536664,lorenzo.rinaldi157@example.com,2024-10-08
+7307,Irene,Leone,Mouse non funzionante,397885551925,irene.leone184@example.com,2024-10-12
+7250,Beatrice,Marchetti,Stampante offline,393619723857,beatrice.marchetti127@example.com,2024-10-13
+7138,Elena,Villa,Internet lento,394229485098,elena.villa15@example.com,2024-10-14
+7189,Aurora,Ferri,Stampante offline,392646842509,aurora.ferri66@example.com,2024-10-20
+7272,Giorgia,Conti,Schermo del PC nero,399542557165,giorgia.conti149@example.com,2024-10-20
+7285,Lorenzo,Lombardi,Telefono non si ricarica,397730128383,lorenzo.lombardi162@example.com,2024-10-22
+7341,Marta,Russo,Stampante offline,395978893931,marta.russo218@example.com,2024-10-29
+7219,Noemi,Barbieri,Problemi con Excel,393513963593,noemi.barbieri96@example.com,2024-11-03
+7241,Alice,Marchetti,Disco esterno non riconosciuto,393192952019,alice.marchetti118@example.com,2024-11-09
+7348,Beatrice,Rinaldi,Porta USB non funzionante,390394595620,beatrice.rinaldi225@example.com,2024-11-17
+7342,Riccardo,Costa,Rete aziendale non disponibile,397464375863,riccardo.costa219@example.com,2024-11-18
+7157,Elena,Villa,Applicazione non si apre,397422675620,elena.villa34@example.com,2024-11-21
+7218,Matteo,Marchetti,Problemi con Excel,393937606335,matteo.marchetti95@example.com,2024-11-21
+7338,Tommaso,Moretti,Impossibile accedere alla posta,391628909287,tommaso.moretti215@example.com,2024-11-22
+7373,Tommaso,Marchetti,Connessione Wi-Fi instabile,391773676501,tommaso.marchetti250@example.com,2024-12-12
+7290,Tommaso,Marchetti,Account bloccato,396122112273,tommaso.marchetti167@example.com,2024-12-13
+7347,Davide,Marini,Errore aggiornamento Windows,398109939874,davide.marini224@example.com,2024-12-14
+7353,Alice,Villa,Problemi con VPN,399121006281,alice.villa230@example.com,2024-12-20
+7362,Aurora,Costa,Problemi con VPN,396028396433,aurora.costa239@example.com,2024-12-20
+7200,Elena,Barbieri,Problemi con Outlook,391813750214,elena.barbieri77@example.com,2024-12-23
+7340,Elena,Conti,Audio non funzionante,394022509217,elena.conti217@example.com,2024-12-25
+7166,Federico,Rinaldi,Internet lento,397928544728,federico.rinaldi43@example.com,2024-12-26
+7148,Camilla,Russo,Problemi Bluetooth,397398882718,camilla.russo25@example.com,2025-01-02
+7369,Federico,Marini,Batteria laptop scarica,397461602717,federico.marini246@example.com,2025-01-04
+7260,Filippo,Serra,Batteria laptop scarica,399998051929,filippo.serra137@example.com,2025-01-16
+7358,Beatrice,Fontana,Porta USB non funzionante,394944530707,beatrice.fontana235@example.com,2025-01-19
+7151,Filippo,Ferri,Computer si spegne improvvisamente,392709577630,filippo.ferri28@example.com,2025-01-24
+7168,Elena,Russo,Account bloccato,390747664702,elena.russo45@example.com,2025-01-26
+7170,Elena,Mancini,Computer non si avvia,392479521121,elena.mancini47@example.com,2025-01-27
+7155,Camilla,Ferri,Errore connessione server,397331688872,camilla.ferri32@example.com,2025-02-02
+7291,Aurora,Leone,Telefono non si ricarica,394103838448,aurora.leone168@example.com,2025-02-04
+7278,Noemi,Costa,Batteria laptop scarica,393384662896,noemi.costa155@example.com,2025-02-05
+7231,Pietro,Galli,Schermo del PC nero,398333840628,pietro.galli108@example.com,2025-02-12
+7293,Sofia,Romano,Memoria del computer esaurita,395565947426,sofia.romano170@example.com,2025-02-13
+7292,Noemi,Marini,Porta USB non funzionante,394133769732,noemi.marini169@example.com,2025-02-15
+7345,Lorenzo,Barbieri,Problemi con Excel,392021037984,lorenzo.barbieri222@example.com,2025-03-05
+7315,Matteo,Greco,Antivirus da configurare,396146801753,matteo.greco192@example.com,2025-03-12
+7300,Filippo,Russo,Batteria laptop scarica,392780181342,filippo.russo177@example.com,2025-03-15
+7267,Emanuele,Russo,Telefono non si ricarica,395030990904,emanuele.russo144@example.com,2025-03-22
+7125,Elena,Rinaldi,Problemi con Excel,394287142271,elena.rinaldi2@example.com,2025-03-27
+7264,Noemi,Greco,File eliminati per errore,392117645456,noemi.greco141@example.com,2025-03-28
+7367,Riccardo,Fontana,Password account dimenticata,393737322848,riccardo.fontana244@example.com,2025-03-31
+7269,Nicolo,Costa,Tastiera non risponde,398794743241,nicolo.costa146@example.com,2025-04-01
+7351,Matteo,Barbieri,Schermo del PC nero,398516068472,matteo.barbieri228@example.com,2025-04-08
+7127,Davide,Galli,Password account dimenticata,397988348136,davide.galli4@example.com,2025-04-11
+7177,Lorenzo,Fontana,Webcam non rilevata,399859962074,lorenzo.fontana54@example.com,2025-04-13
+7284,Nicolo,Galli,Audio non funzionante,392884009850,nicolo.galli161@example.com,2025-04-15
+7271,Filippo,Villa,Audio non funzionante,395771929557,filippo.villa148@example.com,2025-04-24
+7196,Alice,Romano,Mouse non funzionante,398146794714,alice.romano73@example.com,2025-04-25
+7187,Beatrice,Fontana,Connessione Wi-Fi instabile,396997406846,beatrice.fontana64@example.com,2025-04-25
+7214,Sofia,Costa,Webcam non rilevata,391211709645,sofia.costa91@example.com,2025-04-28
+7339,Irene,Mancini,Batteria laptop scarica,395869079551,irene.mancini216@example.com,2025-04-29
+7302,Riccardo,Romano,Rete aziendale non disponibile,393165413166,riccardo.romano179@example.com,2025-05-03
+7227,Alice,Galli,Antivirus da configurare,394741950521,alice.galli104@example.com,2025-05-03
+7142,Pietro,Marini,File eliminati per errore,392164990650,pietro.marini19@example.com,2025-05-03
+7163,Beatrice,Costa,Errore aggiornamento Windows,391652671671,beatrice.costa40@example.com,2025-05-03
+7282,Nicolo,Costa,Internet lento,391582334592,nicolo.costa159@example.com,2025-05-08
+7360,Alice,Russo,Applicazione non si apre,393518531876,alice.russo237@example.com,2025-05-10
+7276,Alice,Serra,Batteria laptop scarica,396732324633,alice.serra153@example.com,2025-05-11
+7167,Emanuele,Villa,Disco esterno non riconosciuto,397563434322,emanuele.villa44@example.com,2025-05-14
+7128,Beatrice,Mancini,Audio non funzionante,391396568720,beatrice.mancini5@example.com,2025-05-16
+7316,Riccardo,Costa,Tastiera non risponde,392056676863,riccardo.costa193@example.com,2025-05-22
+7371,Lorenzo,Russo,Computer si spegne improvvisamente,392831530094,lorenzo.russo248@example.com,2025-05-24
+7156,Marta,Caruso,Antivirus da configurare,399114553748,marta.caruso33@example.com,2025-05-25
+7147,Sofia,Lombardi,Rete aziendale non disponibile,396358979217,sofia.lombardi24@example.com,2025-05-26
+7145,Nicolo,Serra,Antivirus da configurare,399804207627,nicolo.serra22@example.com,2025-05-29
+7172,Irene,Galli,Account bloccato,399484060153,irene.galli49@example.com,2025-06-01
+7174,Pietro,Lombardi,Errore connessione server,396110045227,pietro.lombardi51@example.com,2025-06-25
+7175,Davide,Moretti,Errore aggiornamento Windows,397669456980,davide.moretti52@example.com,2025-06-25
+7243,Davide,Galli,Porta USB non funzionante,396746462948,davide.galli120@example.com,2025-06-26
+7257,Pietro,Lombardi,Memoria del computer esaurita,399616526560,pietro.lombardi134@example.com,2025-07-09
+7330,Riccardo,Villa,File eliminati per errore,392917114313,riccardo.villa207@example.com,2025-07-10
+7193,Nicolo,Marchetti,Monitor senza segnale,398284873191,nicolo.marchetti70@example.com,2025-07-12
+7160,Aurora,Moretti,Porta USB non funzionante,394036414160,aurora.moretti37@example.com,2025-07-12
+7171,Elena,Costa,Computer si spegne improvvisamente,390029671024,elena.costa48@example.com,2025-07-15
+7124,Alice,Russo,Tastiera non risponde,392117550026,alice.russo1@example.com,2025-07-17
+7198,Marta,Ferrara,Telefono non si ricarica,391184665072,marta.ferrara75@example.com,2025-07-19
+7336,Marta,Fontana,Problemi Bluetooth,393467295037,marta.fontana213@example.com,2025-07-26
+7247,Marta,Galli,Router non funzionante,394864584877,marta.galli124@example.com,2025-07-30
+7237,Pietro,Leone,Audio non funzionante,396921017989,pietro.leone114@example.com,2025-08-07
+7176,Noemi,Leone,Problemi con VPN,394434254587,noemi.leone53@example.com,2025-08-14
+7238,Sofia,Fontana,Batteria laptop scarica,398879675121,sofia.fontana115@example.com,2025-08-17
+7343,Filippo,Conti,Monitor senza segnale,391799399069,filippo.conti220@example.com,2025-08-26
+7203,Filippo,Leone,Monitor senza segnale,394607867724,filippo.leone80@example.com,2025-08-26
+7140,Federico,Lombardi,Internet lento,392070304950,federico.lombardi17@example.com,2025-08-30
+7183,Lorenzo,Conti,Tastiera non risponde,398568443739,lorenzo.conti60@example.com,2025-09-03
+7255,Emanuele,Caruso,Disco esterno non riconosciuto,392922273397,emanuele.caruso132@example.com,2025-09-03
+7153,Beatrice,Ferri,Errore aggiornamento Windows,394832763465,beatrice.ferri30@example.com,2025-09-08
+7363,Pietro,Villa,Stampante offline,396831568366,pietro.villa240@example.com,2025-09-10
+7294,Aurora,Costa,Memoria del computer esaurita,392677094459,aurora.costa171@example.com,2025-09-12
+7350,Aurora,Romano,Webcam non rilevata,397482633310,aurora.romano227@example.com,2025-09-23
+7192,Alice,Galli,Router non funzionante,397031934278,alice.galli69@example.com,2025-09-24
+7357,Riccardo,Conti,Memoria del computer esaurita,392460819482,riccardo.conti234@example.com,2025-09-28
+7246,Riccardo,Ferri,Impossibile accedere alla posta,391194840342,riccardo.ferri123@example.com,2025-10-02
+7254,Nicolo,Ferrara,Account bloccato,399455686824,nicolo.ferrara131@example.com,2025-10-04
+7288,Federico,Ferrara,Mouse non funzionante,393094710455,federico.ferrara165@example.com,2025-10-10
+7273,Sofia,Ferrara,Schermo del PC nero,396421522814,sofia.ferrara150@example.com,2025-10-14
+7365,Beatrice,Ferrara,Tastiera non risponde,396769243075,beatrice.ferrara242@example.com,2025-10-16
+7217,Tommaso,Lombardi,Webcam non rilevata,396594889060,tommaso.lombardi94@example.com,2025-10-20
+7215,Tommaso,Leone,Webcam non rilevata,398610432053,tommaso.leone92@example.com,2025-10-23
+7195,Aurora,Russo,Batteria laptop scarica,399208934193,aurora.russo72@example.com,2025-11-02
+7299,Elena,Mancini,Antivirus da configurare,395924164061,elena.mancini176@example.com,2025-11-08
+7154,Davide,Conti,Errore connessione server,390923810967,davide.conti31@example.com,2025-11-17
+7158,Giorgia,Barbieri,File eliminati per errore,393512670454,giorgia.barbieri35@example.com,2025-11-18
+7186,Aurora,Barbieri,Stampante non rilevata,396303659684,aurora.barbieri63@example.com,2025-11-24
+7230,Sofia,Caruso,Applicazione non si apre,398174668074,sofia.caruso107@example.com,2025-11-24
+7249,Filippo,Greco,PC molto lento,395316400785,filippo.greco126@example.com,2025-11-25
+7372,Camilla,Costa,Connessione Wi-Fi instabile,399471980292,camilla.costa249@example.com,2025-12-02
+7337,Elena,Serra,Impossibile accedere alla posta,399531328709,elena.serra214@example.com,2025-12-05
+7126,Alice,Greco,Tastiera non risponde,396875935868,alice.greco3@example.com,2025-12-05
+7286,Davide,Marchetti,Webcam non rilevata,390483793702,davide.marchetti163@example.com,2025-12-09
+7206,Beatrice,Conti,Antivirus da configurare,391514835122,beatrice.conti83@example.com,2025-12-21
+7279,Matteo,Mancini,Schermo del PC nero,391749560089,matteo.mancini156@example.com,2025-12-22
+7228,Lorenzo,Leone,Problemi con Excel,392460905595,lorenzo.leone105@example.com,2025-12-23
+7289,Lorenzo,Fontana,Account bloccato,395578047759,lorenzo.fontana166@example.com,2025-12-25
+7137,Alice,Rinaldi,Tastiera non risponde,394476904382,alice.rinaldi14@example.com,2025-12-26
+7287,Aurora,Moretti,Problemi con Excel,395315372202,aurora.moretti164@example.com,2025-12-29
+7295,Elena,Galli,Porta USB non funzionante,397859126165,elena.galli172@example.com,2026-01-06
+7323,Aurora,Villa,Computer non si avvia,390811786170,aurora.villa200@example.com,2026-01-07
+7194,Filippo,Caruso,Monitor senza segnale,390321372363,filippo.caruso71@example.com,2026-01-19
+7236,Tommaso,Costa,Webcam non rilevata,393621743522,tommaso.costa113@example.com,2026-01-21
+7251,Aurora,Russo,Monitor senza segnale,393143886526,aurora.russo128@example.com,2026-01-24
+7169,Noemi,Ferri,Problemi con Outlook,394547372211,noemi.ferri46@example.com,2026-01-25
+7239,Lorenzo,Greco,Password account dimenticata,394918037444,lorenzo.greco116@example.com,2026-01-25
+7216,Marta,Galli,Webcam non rilevata,398088654578,marta.galli93@example.com,2026-01-25
+7325,Emanuele,Fontana,Stampante offline,391602504887,emanuele.fontana202@example.com,2026-02-02
+7346,Sofia,Caruso,Mouse non funzionante,391486610823,sofia.caruso223@example.com,2026-02-07
+7256,Noemi,Romano,Problemi Bluetooth,398337109096,noemi.romano133@example.com,2026-02-16
+7211,Irene,Costa,Audio non funzionante,395256337440,irene.costa88@example.com,2026-02-17
+7268,Camilla,Greco,Porta USB non funzionante,394930981819,camilla.greco145@example.com,2026-02-22
+7184,Giorgia,Ferri,Batteria laptop scarica,392707783689,giorgia.ferri61@example.com,2026-02-23
+7229,Aurora,Galli,Stampante non rilevata,399207376773,aurora.galli106@example.com,2026-03-03
+7301,Nicolo,Marini,Telefono non si ricarica,396538687260,nicolo.marini178@example.com,2026-03-06
+7320,Elena,Marini,Problemi con Outlook,395766349229,elena.marini197@example.com,2026-03-11
+7225,Camilla,Galli,Applicazione non si apre,395293098671,camilla.galli102@example.com,2026-03-22
+7130,Tommaso,Rinaldi,Problemi con Excel,393914781165,tommaso.rinaldi7@example.com,2026-03-28
+7213,Giorgia,Rinaldi,Impossibile accedere alla posta,395333315159,giorgia.rinaldi90@example.com,2026-03-31
+7202,Marta,Serra,Audio non funzionante,394174831165,marta.serra79@example.com,2026-04-02
+7356,Irene,Barbieri,Connessione Wi-Fi instabile,391660832798,irene.barbieri233@example.com,2026-04-05
+7212,Tommaso,Rinaldi,Mouse non funzionante,397410386890,tommaso.rinaldi89@example.com,2026-04-08
+7262,Irene,Leone,Disco esterno non riconosciuto,398506113222,irene.leone139@example.com,2026-04-10
+7283,Marta,Fontana,Mouse non funzionante,393500144758,marta.fontana160@example.com,2026-04-10
+7139,Giorgia,Mancini,Batteria laptop scarica,394240392744,giorgia.mancini16@example.com,2026-04-12
+7197,Aurora,Leone,Impossibile accedere alla posta,399262423939,aurora.leone74@example.com,2026-04-15
+7327,Federico,Russo,File eliminati per errore,390566037373,federico.russo204@example.com,2026-04-19
+7222,Matteo,Galli,Tastiera non risponde,393796772297,matteo.galli99@example.com,2026-04-21
+7281,Lorenzo,Russo,Mouse non funzionante,390529086891,lorenzo.russo158@example.com,2026-04-22
+7253,Camilla,Costa,Problemi Bluetooth,396479870123,camilla.costa130@example.com,2026-04-25
+7304,Camilla,Serra,Batteria laptop scarica,397415720227,camilla.serra181@example.com,2026-05-01
+7173,Alice,Caruso,Mouse non funzionante,396725448936,alice.caruso50@example.com,2026-05-02
+7274,Elena,Rinaldi,Disco esterno non riconosciuto,395122698071,elena.rinaldi151@example.com,2026-05-03
+7077,Super,Luigi,Lavatrice rotta,+393333334444,hjhjhhhik@gmail.com,2026-05-03
+7352,Filippo,Marchetti,PC molto lento,399695223805,filippo.marchetti229@example.com,2026-05-07
+7270,Alice,Galli,Stampante non rilevata,396982054682,alice.galli147@example.com,2026-05-08
+7328,Nicolo,Moretti,Internet lento,394097098573,nicolo.moretti205@example.com,2026-05-09
+7318,Federico,Ferrara,Porta USB non funzionante,393679700200,federico.ferrara195@example.com,2026-05-11
+7335,Lorenzo,Ferrara,Problemi Bluetooth,391212806224,lorenzo.ferrara212@example.com,2026-05-23
+7370,Davide,Costa,Tastiera non risponde,396493013038,davide.costa247@example.com,2026-06-07
+7178,Emanuele,Mancini,Porta USB non funzionante,396403368362,emanuele.mancini55@example.com,2026-06-11
+7135,Filippo,Greco,Password account dimenticata,398420055070,filippo.greco12@example.com,2026-06-16
+7235,Lorenzo,Costa,Password account dimenticata,390073356693,lorenzo.costa112@example.com,2026-06-16
+7223,Sofia,Ferri,Router non funzionante,394235988126,sofia.ferri100@example.com,2026-06-21
+7180,Beatrice,Serra,Errore aggiornamento Windows,397259461962,beatrice.serra57@example.com,2026-06-24
+7334,Davide,Lombardi,Batteria laptop scarica,398088190947,davide.lombardi211@example.com,2026-06-27
+7201,Davide,Serra,Connessione Wi-Fi instabile,397515907854,davide.serra78@example.com,2026-07-07
+7306,Noemi,Galli,Antivirus da configurare,392808182768,noemi.galli183@example.com,2026-07-10
+7309,Camilla,Ferrara,Internet lento,390774768445,camilla.ferrara186@example.com,2026-07-14
+7298,Alice,Villa,Rete aziendale non disponibile,393381866192,alice.villa175@example.com,2026-07-15
+7204,Camilla,Marini,Antivirus da configurare,393733296400,camilla.marini81@example.com,2026-07-17
+7179,Elena,Galli,Router non funzionante,390217880840,elena.galli56@example.com,2026-07-20
+7326,Riccardo,Fontana,Account bloccato,390253645471,riccardo.fontana203@example.com,2026-07-24
+7190,Camilla,Barbieri,Porta USB non funzionante,398134255929,camilla.barbieri67@example.com,2026-07-24
+7149,Giorgia,Lombardi,Porta USB non funzionante,393882632073,giorgia.lombardi26@example.com,2026-07-31
+7331,Matteo,Conti,Account bloccato,392116860830,matteo.conti208@example.com,2026-08-06
+7131,Filippo,Leone,Antivirus da configurare,395980765261,filippo.leone8@example.com,2026-08-16
+7261,Federico,Marchetti,Tastiera non risponde,392837670326,federico.marchetti138@example.com,2026-08-16
+7226,Aurora,Costa,Stampante offline,394002857512,aurora.costa103@example.com,2026-08-18
+7277,Matteo,Romano,Memoria del computer esaurita,397323087055,matteo.romano154@example.com,2026-08-19
+7162,Emanuele,Fontana,Connessione Wi-Fi instabile,390593676791,emanuele.fontana39@example.com,2026-08-21
+7324,Giorgia,Galli,Audio non funzionante,393919087622,giorgia.galli201@example.com,2026-08-24
+7182,Camilla,Serra,Disco esterno non riconosciuto,392539588274,camilla.serra59@example.com,2026-08-25
+7366,Riccardo,Moretti,Rete aziendale non disponibile,399658881012,riccardo.moretti243@example.com,2026-09-01
+7313,Lorenzo,Lombardi,Monitor senza segnale,390554031864,lorenzo.lombardi190@example.com,2026-09-03
+7252,Marta,Ferri,Audio non funzionante,391668160910,marta.ferri129@example.com,2026-09-10
+7297,Sofia,Russo,Problemi Bluetooth,391491913424,sofia.russo174@example.com,2026-09-15
+7266,Alice,Lombardi,Porta USB non funzionante,390584540487,alice.lombardi143@example.com,2026-09-28
+7303,Elena,Mancini,Batteria laptop scarica,392186894135,elena.mancini180@example.com,2026-09-29
+7349,Tommaso,Caruso,Internet lento,391342661012,tommaso.caruso226@example.com,2026-10-02
+7344,Tommaso,Romano,Webcam non rilevata,391729180768,tommaso.romano221@example.com,2026-10-13
+7368,Aurora,Lombardi,Errore connessione server,391654819398,aurora.lombardi245@example.com,2026-10-21
+7319,Nicolo,Conti,PC molto lento,397446510099,nicolo.conti196@example.com,2026-10-23
+7185,Marta,Costa,Password account dimenticata,399318090189,marta.costa62@example.com,2026-10-25
+7329,Tommaso,Romano,Audio non funzionante,391805492238,tommaso.romano206@example.com,2026-11-01
 3013,Luigi,Rossi,Computer non si accende,393331234587,mario.rossi@example.com,2026-11-01
 4562,Lorelei,Bianchissimi,Problemi Wi-Fi e giga,393401238767,laura.bianchiii@example.com,2026-11-02
 7076,Giuseppe,Verdi,Stampante non funziona,393491234576,giuseppe.verdi@example.com,2026-11-03
-7077,Super,Luigi,Lavatrice rotta,+393333334444,hjhjhhhik@gmail.com,2026-05-03
 7078,Marco,Bianchi,Schermo del PC nero,393401112233,marco.bianchi@example.com,2026-11-04
 7079,Anna,Ferrari,Password dimenticata,393401223344,anna.ferrari@example.com,2026-11-04
 7080,Paolo,Ricci,Connessione Internet lenta,393402334455,paolo.ricci@example.com,2026-11-04
 7081,Sara,Romano,Mouse non funzionante,393403445566,sara.romano@example.com,2026-11-05
+7221,Noemi,Romano,Errore aggiornamento Windows,397880371318,noemi.romano98@example.com,2026-11-05
 7082,Andrea,Conti,Problemi con Outlook,393404556677,andrea.conti@example.com,2026-11-05
 7083,Elena,Marino,Telefono non si ricarica,393405667788,elena.marino@example.com,2026-11-05
+7086,Matteo,Gallo,Problemi con la rete aziendale,393408990011,matteo.gallo@example.com,2026-11-06
 7084,Francesco,Greco,PC molto lento,393406778899,francesco.greco@example.com,2026-11-06
 7085,Giulia,Bruno,Errore durante aggiornamento Windows,393407889900,giulia.bruno@example.com,2026-11-06
-7086,Matteo,Gallo,Problemi con la rete aziendale,393408990011,matteo.gallo@example.com,2026-11-06
-7087,Chiara,Fontana,Tastiera non risponde,393409001122,chiara.fontana@example.com,2026-11-07
 7088,Luca,Moretti,File cancellati accidentalmente,393410112233,luca.moretti@example.com,2026-11-07
-7089,Martina,Barbieri,Monitor senza segnale,393411223344,martina.barbieri@example.com,2026-11-07
+7087,Chiara,Fontana,Tastiera non risponde,393409001122,chiara.fontana@example.com,2026-11-07
 7090,Simone,Leone,Account bloccato,393412334455,simone.leone@example.com,2026-11-07
+7089,Martina,Barbieri,Monitor senza segnale,393411223344,martina.barbieri@example.com,2026-11-07
+7094,Roberto,De Luca,Stampante offline,393416778899,roberto.deluca@example.com,2026-11-08
+7093,Francesca,Longo,Applicazione non si apre,393415667788,francesca.longo@example.com,2026-11-08
 7091,Valentina,Serra,Problemi con VPN,393413445566,valentina.serra@example.com,2026-11-08
 7092,Alessandro,Marchetti,Hard disk non riconosciuto,393414556677,alessandro.marchetti@example.com,2026-11-08
-7093,Francesca,Longo,Applicazione non si apre,393415667788,francesca.longo@example.com,2026-11-08
-7094,Roberto,De Luca,Stampante offline,393416778899,roberto.deluca@example.com,2026-11-08
-7095,Silvia,Giordano,Problemi audio durante videochiamata,393417889900,silvia.giordano@example.com,2026-11-09
-7096,Gabriele,Caruso,Computer si spegne da solo,393418990011,gabriele.caruso@example.com,2026-11-09
-7097,Alessia,Vitale,Impossibile accedere alla posta,393419001122,alessia.vitale@example.com,2026-11-09
 7098,Daniele,Mariani,Router non funzionante,393420112233,daniele.mariani@example.com,2026-11-09
-7099,Beatrice,Colombo,Schermo del telefono rotto,393421223344,beatrice.colombo@example.com,2026-11-10
-7100,Stefano,Esposito,Problemi con Excel,393422334455,stefano.esposito@example.com,2026-11-10
+7097,Alessia,Vitale,Impossibile accedere alla posta,393419001122,alessia.vitale@example.com,2026-11-09
+7096,Gabriele,Caruso,Computer si spegne da solo,393418990011,gabriele.caruso@example.com,2026-11-09
+7095,Silvia,Giordano,Problemi audio durante videochiamata,393417889900,silvia.giordano@example.com,2026-11-09
 7101,Claudia,Testa,PC non riconosce USB,393423445566,claudia.testa@example.com,2026-11-10
+7099,Beatrice,Colombo,Schermo del telefono rotto,393421223344,beatrice.colombo@example.com,2026-11-10
 7102,Filippo,Grassi,Memoria del computer piena,393424556677,filippo.grassi@example.com,2026-11-10
-7103,Noemi,Pellegrini,Problemi con antivirus,393425667788,noemi.pellegrini@example.com,2026-11-11
-7104,Tommaso,Rinaldi,Webcam non rilevata,393426778899,tommaso.rinaldi@example.com,2026-11-11
-7105,Elisa,Martini,Impossibile stampare PDF,393427889900,elisa.martini@example.com,2026-11-11
-7106,Leonardo,Farina,Errore connessione server,393428990011,leonardo.farina@example.com,2026-11-11
-7107,Gaia,Fontanella,Problemi con Bluetooth,393429001122,gaia.fontanella@example.com,2026-11-11
-7108,Enrico,Monti,Batteria laptop non dura,393430112233,enrico.monti@example.com,2026-11-11
-7109,Veronica,Amato,Account email compromesso,393431223344,veronica.amato@example.com,2026-11-11
-7110,Michele,Costa,Errore installazione software,393432334455,michele.costa@example.com,2026-11-11
-7111,Serena,Fabbri,Schermo lampeggiante,393433445566,serena.fabbri@example.com,2026-11-11
-7112,Diego,Messina,Problemi con backup,393434556677,diego.messina@example.com,2026-11-11
-7113,Ilaria,Parisi,Telefono non rileva SIM,393435667788,ilaria.parisi@example.com,2026-11-11
+7100,Stefano,Esposito,Problemi con Excel,393422334455,stefano.esposito@example.com,2026-11-10
+7123,Luigi,Rossi,Guasto,+392223334444,lll@ooo.com,2026-11-11
 7114,Christian,Fiore,PC non si collega al Wi-Fi,393436778899,christian.fiore@example.com,2026-11-11
-7115,Rebecca,De Santis,Problemi con Google Drive,393437889900,rebecca.desantis@example.com,2026-11-11
+7122,Nicola,Benedetti,Errore schermata blu,393444556677,nicola.benedetti@example.com,2026-11-11
+7121,Monica,De Angelis,Problemi con sincronizzazione file,393443445566,monica.deangelis@example.com,2026-11-11
 7116,Antonio,Marini,Disco SSD danneggiato,393438990011,antonio.marini@example.com,2026-11-11
+7113,Ilaria,Parisi,Telefono non rileva SIM,393435667788,ilaria.parisi@example.com,2026-11-11
+7112,Diego,Messina,Problemi con backup,393434556677,diego.messina@example.com,2026-11-11
 7117,Martina,Silvestri,Microfono non funzionante,393439001122,martina.silvestri@example.com,2026-11-11
+7111,Serena,Fabbri,Schermo lampeggiante,393433445566,serena.fabbri@example.com,2026-11-11
 7118,Edoardo,Pagani,Errore accesso gestionale,393440112233,edoardo.pagani@example.com,2026-11-11
+7110,Michele,Costa,Errore installazione software,393432334455,michele.costa@example.com,2026-11-11
 7119,Carolina,Palumbo,Problemi con caricamento pagine web,393441223344,carolina.palumbo@example.com,2026-11-11
 7120,Alberto,Orlando,PC non riconosce stampante,393442334455,alberto.orlando@example.com,2026-11-11
-7121,Monica,De Angelis,Problemi con sincronizzazione file,393443445566,monica.deangelis@example.com,2026-11-11
-7122,Nicola,Benedetti,Errore schermata blu,393444556677,nicola.benedetti@example.com,2026-11-11
-7123,Luigi,Rossi,Guasto,+392223334444,lll@ooo.com,2026-11-11
+7108,Enrico,Monti,Batteria laptop non dura,393430112233,enrico.monti@example.com,2026-11-11
+7107,Gaia,Fontanella,Problemi con Bluetooth,393429001122,gaia.fontanella@example.com,2026-11-11
+7106,Leonardo,Farina,Errore connessione server,393428990011,leonardo.farina@example.com,2026-11-11
+7105,Elisa,Martini,Impossibile stampare PDF,393427889900,elisa.martini@example.com,2026-11-11
+7104,Tommaso,Rinaldi,Webcam non rilevata,393426778899,tommaso.rinaldi@example.com,2026-11-11
+7103,Noemi,Pellegrini,Problemi con antivirus,393425667788,noemi.pellegrini@example.com,2026-11-11
+7115,Rebecca,De Santis,Problemi con Google Drive,393437889900,rebecca.desantis@example.com,2026-11-11
+7109,Veronica,Amato,Account email compromesso,393431223344,veronica.amato@example.com,2026-11-11

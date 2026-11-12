@@ -2,6 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 from matplotlib.ticker import MultipleLocator
+import altair as alt
 
 st.set_page_config(page_title="Statistica", layout="wide", initial_sidebar_state="collapsed")
 
@@ -10,6 +11,107 @@ st.header("Conteggio ticket per utente")
 
 try:
     df = pd.read_csv("dati.csv", dtype={"Cellulare": "str"})
+    
+
+    # Conversione date
+    df["Data"] = pd.to_datetime(
+        df["Data"],
+        format="%Y-%m-%d",
+        errors="coerce"
+    )
+
+    df = df.dropna(subset=["Data"])
+
+    st.title("Andamento segnalazioni")
+
+    periodo = st.selectbox(
+        "Seleziona periodo",
+        ["Mensile", "Annuale"]
+    )
+
+    match periodo:
+        case "Mensile":
+            anni = sorted(df["Data"].dt.year.unique())
+            anno = st.selectbox("Anno", anni)
+
+            filtered = df[df["Data"].dt.year == anno].copy()
+
+            plot_data = (
+                filtered
+                .groupby(filtered["Data"].dt.month)
+                .size()
+                .reindex(range(1, 13), fill_value=0)
+                .rename_axis("Mese")
+                .reset_index(name="Totale")
+            )
+
+            mesi = {
+                1: "Gennaio", 2: "Febbraio", 3: "Marzo",
+                4: "Aprile", 5: "Maggio", 6: "Giugno",
+                7: "Luglio", 8: "Agosto", 9: "Settembre",
+                10: "Ottobre", 11: "Novembre", 12: "Dicembre"
+            }
+
+            plot_data["Periodo"] = plot_data["Mese"].map(mesi)
+            ordine = list(mesi.values())
+
+        case "Annuale":
+            plot_data = (
+                df.groupby(df["Data"].dt.year)
+                .size()
+                .reset_index(name="Totale")
+            )
+
+            plot_data.columns = ["Periodo", "Totale"]
+            plot_data["Periodo"] = plot_data["Periodo"].astype(str)
+            ordine = sorted(plot_data["Periodo"].tolist())
+
+    # Grafico Altair
+    chart = (
+    alt.Chart(plot_data)
+    .mark_line(
+        color="#4F8BF9",
+        strokeWidth=3,
+        point=alt.OverlayMarkDef(
+            filled=True,
+            size=90,
+            color="#4F8BF9"
+        )
+    )
+    .encode(
+        x=alt.X(
+            "Periodo:N",
+            sort=ordine,
+            title="Periodo",
+            axis=alt.Axis(labelAngle=0)
+        ),
+        y=alt.Y(
+            "Totale:Q",
+            title="Numero segnalazioni",
+            scale=alt.Scale(domainMin=0)
+        ),
+        tooltip=[
+            alt.Tooltip("Periodo:N"),
+            alt.Tooltip("Totale:Q")
+        ]
+    )
+    .properties(
+        height=350
+    )
+)
+
+    st.altair_chart(
+        chart,
+        use_container_width=True
+    )
+
+    # Debug: verifica dati
+    with st.expander("Visualizza dati del grafico"):
+        st.dataframe(plot_data)
+
+
+
+    ###############################à
 
     df["Utente"] = (
         df["Nome"].fillna("").astype(str)
@@ -31,56 +133,11 @@ try:
         ascending=[False, True]
     ).reset_index(drop=True)
 
-    #GRAFICO A BARRE
-    st.markdown("### 📈 Grafico Distribuzione Ticket")
 
-    # Configurazione grafico per Dark Mode / tema scuro
-    fig, ax = plt.subplots(figsize=(8, 6), facecolor="none")
-    ax.set_facecolor("none")
-    #dimensione label
-    ax.tick_params(axis="both", labelsize=6, colors="#BBBBBB")
-    #dimensione x, tick
-    ax.set_xlim(left=0, right=5)
-    ax.xaxis.set_major_locator(MultipleLocator(1))
+    #RIEPILOGO
+    st.markdown("### 📝 Riepilogo Ticket")
+    st.dataframe(df_riepilogo, width='stretch', hide_index=True)
 
-    bars = ax.barh(
-    df_riepilogo["Utente"],
-    df_riepilogo["Numero Ticket"],
-    color="#4A90E2",
-    edgecolor="#4A90E2",
-    height=0.1,
-    )
-
-    ax.set_ylabel(
-        "Utente", fontsize=10, fontweight="bold", color="#CCCCCC"
-    )
-    ax.set_title(
-        "Numero di Ticket",
-        fontsize=12,
-        fontweight="bold",
-        color="#FFFFFF",
-        pad=12,
-    )
-
-    ax.grid(axis="y", linestyle="--", alpha=0.2, color="#FFFFFF")
-    ax.set_axisbelow(True)
-
-    #spine = bordo del grafico
-    for spine in ["top", "right"]:
-        ax.spines[spine].set_visible(False)
-    for spine in ["left", "bottom"]:
-        ax.spines[spine].set_color("#555555")
-
-    plt.tight_layout()
-    st.pyplot(fig, width='stretch')
-
-    col1, col2 = st.columns([1,1])
-    with col1:
-        #RIEPILOGO
-        st.markdown("### 📝 Riepilogo Ticket")
-        st.dataframe(df_riepilogo, width='stretch', hide_index=True)
-    with col2:
-        pass
 
 
 except FileNotFoundError:
