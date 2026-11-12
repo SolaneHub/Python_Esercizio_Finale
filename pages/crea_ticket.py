@@ -8,8 +8,89 @@ import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 from datetime import date
+import base64 #importo file in html
 
 from prefissi import get_prefissi_internazionali, separa_prefisso_e_numero
+
+#FUNZIONI
+#Caricamento immagini per HTML
+def get_image_base64(path):
+        with open(path, "rb") as f:
+            return base64.b64encode(f.read()).decode("utf-8")
+logo_base64 = get_image_base64("pages/assets/logo.png")
+
+# STILE BARRA TITOLO
+st.markdown("""
+<style>
+    /* Force Orbitron globally across all text, markdown, and headers */
+    html, body, [class*="css"] {
+        font-family: 'Orbitron', sans-serif !important;
+    }
+    /* Ensure headers also use the font */
+    h1, h2, h3, h4, h5, h6 {
+    font-family: 'Orbitron', sans-serif !important;
+    }
+
+    .stMainBlockContainer {
+        padding-top: 0 !important;
+    }
+
+    .titlebar {
+        position: relative;
+        left: 50%;
+        width: 100vw;
+        transform: translateX(-50%);
+        box-sizing: border-box;
+
+        background-color: #1E3A5F;
+        color: white;
+
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+
+    /* Make the link take over the flex layout and strip default anchor underlines */
+    .titlebar-link {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        padding: 20px 30px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .titlebar-link {
+        color: white;
+        text-decoration: none;
+    }
+
+    .titlebar img {
+        width: 50px;
+        height: 50px;
+        object-fit: contain;
+    }
+
+    .titlebar h1 {
+        color: white;
+        margin: 0;
+        padding: 0;
+        padding-top: 8px;
+        font-size: 48px;
+        text-decoration: none !important;
+    }
+</style>
+""", unsafe_allow_html=True)
+
+#BARRA TITOLO
+st.markdown(f"""
+<div class="titlebar">
+    <a href="/" class="titlebar-link">
+        <img src="data:image/png;base64,{logo_base64}" alt="Logo">
+        <h1>Help Desk Manager</h1>
+    </a>
+</div>
+""", unsafe_allow_html=True)
+
 
 # =====================================================================
 # 1. CONFIGURAZIONE INIZIALE DELLA PAGINA

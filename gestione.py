@@ -5,9 +5,7 @@ from typing import Any
 
 import pandas as pd
 import streamlit as st
-import base64
-
-
+import base64 #importo file in html
 
 
 def EliminaTicket(df: pd.DataFrame, id_selezionati: list[Any]) -> None:
@@ -56,14 +54,13 @@ def _formatta_data_italiana(data_str: Any) -> str:
         return f"{parti[2]}/{parti[1]}/{parti[0]}"
     return val
 
-
-def main() -> None:
-
-    def get_image_base64(path):
+#Caricamento immagini per HTML
+def get_image_base64(path):
         with open(path, "rb") as f:
             return base64.b64encode(f.read()).decode("utf-8")
+logo_base64 = get_image_base64("pages/assets/logo.png")
 
-    logo_base64 = get_image_base64("assets/logo.png")
+def main() -> None:
 
     # STILE BARRA TITOLO
     st.markdown("""
@@ -137,11 +134,12 @@ def main() -> None:
     </div>
     """, unsafe_allow_html=True)
 
+
     st.set_page_config(
         page_title="Home - Gestore Ticket",
         layout="wide",
         initial_sidebar_state="collapsed",
-        page_icon="assets/logo.png"
+        page_icon="pages/assets/logo.png"
     )
 
     # Caricamento del dataset
